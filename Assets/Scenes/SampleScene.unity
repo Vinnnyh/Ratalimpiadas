@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topSpin:
-    upForce: 3
+    upForce: 4
     hitForce: 8
   flat:
     upForce: 4

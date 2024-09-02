@@ -32,13 +32,13 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             hitting = true;
-            hitChargeTime = 0f; // Reiniciar el tiempo de carga al empezar a presionar la tecla
+            hitChargeTime = 0f; 
         }
 
         // Detectar cuando se mantiene presionada la tecla de disparo
         if (hitting)
         {
-            hitChargeTime += Time.deltaTime; // Incrementar el tiempo de carga según el tiempo que la tecla esté presionada
+            hitChargeTime += Time.deltaTime; 
         }
 
         // Detectar cuando se suelta la tecla de disparo
@@ -65,7 +65,7 @@ public class Player_Movement : MonoBehaviour
     private void PerformShot()
     {
         // Limitar el tiempo de carga para que no exceda un valor máximo
-        float maxChargeTime = 3f; // Tiempo máximo de carga
+        float maxChargeTime = 3f; 
         float chargePercent = Mathf.Clamp01(hitChargeTime / maxChargeTime);
 
         // Fuerza base
