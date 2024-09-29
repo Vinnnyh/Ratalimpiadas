@@ -3,92 +3,130 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
-{   
-    public Transform aimTarget;
-    float speed = 3f;
-    
+{
+    public Transform ball;  
+    public GameObject ballPredictionMarker; 
+    public float speed = 3f;
+    public float hitRadius = 1.5f; 
+    public float maxChargeTime = 3f; 
+    public float baseHitForce = 5f;  
+    public float strongHitMultiplier = 1.2f; 
+    public float hitForceMultiplier = 10f; 
+
+    private BoxCollider racketCollider;  // Collider para el golpe de la raqueta
     bool hitting;
-    // Variable para medir el tiempo que se mantiene presionada la tecla
-    float hitChargeTime = 0f; 
+    float hitChargeTime = 0f;
 
-    Vector3 aimTargetInitialPosition;
-
-    ShotManager shotManager;
-    Shot currentShot;
+    Vector3 predictedBallPosition;
 
     private void Start()
     {
-        aimTargetInitialPosition = aimTarget.position;
-        shotManager = GetComponent<ShotManager>();
-        currentShot = shotManager.topSpin;
+        ballPredictionMarker.SetActive(false); 
+
+        // Buscar el BoxCollider de la raqueta en el objeto hijo "RacketCollider"
+        racketCollider = GameObject.Find("RacketCollider").GetComponent<BoxCollider>();  
     }
 
     void Update()
     {
+        // Movimiento del jugador
         float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
-        
-        // Detectar cuando se presiona la tecla de disparo (en este caso, espacio)
+        transform.Translate(Vector3.right * h * speed * Time.deltaTime);
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             hitting = true;
-            hitChargeTime = 0f; 
+            hitChargeTime = 0f;
         }
 
-        // Detectar cuando se mantiene presionada la tecla de disparo
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+        {
+            hitting = true;
+            hitChargeTime = 0f;  
+        }
+
         if (hitting)
         {
-            hitChargeTime += Time.deltaTime; 
+            hitChargeTime += Time.deltaTime;  
         }
 
-        // Detectar cuando se suelta la tecla de disparo
         if (Input.GetKeyUp(KeyCode.Space))
         {
             hitting = false;
-            PerformShot(); // Llamar a la función para disparar
+            PerformShot(false); 
         }
 
-        // Movimiento del aimTarget
-        if (hitting)
+        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl))
         {
-            aimTarget.Translate(new Vector3(h, 0, v) * speed * 2 * Time.deltaTime);
+            hitting = false;
+            PerformShot(true); 
         }
 
-        // Movimiento del jugador
-        if (!hitting && h != 0)
-        {
-            transform.Translate(Vector3.right * h * speed * Time.deltaTime);
-        }
+        PredictBotShot();  
     }
 
-    // Función que realiza el disparo
-    private void PerformShot()
+    private void PerformShot(bool isStrongHit)
     {
-        // Limitar el tiempo de carga para que no exceda un valor máximo
-        float maxChargeTime = 3f; 
         float chargePercent = Mathf.Clamp01(hitChargeTime / maxChargeTime);
 
-        // Fuerza base
-        float baseHitForce = 5f;
-        float baseUpForce = 2f;
+        float finalForce = baseHitForce + (chargePercent * hitForceMultiplier);
 
-        // Calcular la fuerza final en función del tiempo de carga
-        float finalHitForce = baseHitForce + (currentShot.hitForce * chargePercent);
-        float finalUpForce = baseUpForce + (currentShot.upForce * chargePercent);
+        if (isStrongHit)
+        {
+            finalForce *= strongHitMultiplier; 
+        }
 
-        // Aplicar la fuerza calculada
-        currentShot.hitForce = finalHitForce;
-        currentShot.upForce = finalUpForce;
+        // Solo golpea si la pelota está dentro del radio de golpeo
+        if (Vector3.Distance(transform.position, ball.position) <= hitRadius)
+        {
+            Vector3 hitDirection = Vector3.forward;
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                hitDirection = new Vector3(-0.5f, 0, 1).normalized;  
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                hitDirection = new Vector3(0.5f, 0, 1).normalized; 
+            }
+
+            ball.GetComponent<Rigidbody>().velocity = hitDirection * finalForce + new Vector3(0, 3, 0); 
+        }
     }
 
-    // Detectar colisión con "Ball"
+    // Detectar colisiones para asegurarse de que solo el RacketCollider golpea la pelota
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball"))
         {
-            Vector3 dir = aimTarget.position - transform.position;
-            other.GetComponent<Rigidbody>().velocity = dir.normalized * currentShot.hitForce + new Vector3(0 , currentShot.upForce , 0);
+            // Solo permite golpear si el collider tiene el tag "Racket"
+            if (other.transform.CompareTag("Racket"))
+            {
+                Debug.Log("La pelota fue golpeada por la raqueta.");
+                PerformShot(false);  // Realiza el golpe aquí
+            }
+        }
+    }
+
+    private void PredictBotShot()
+    {
+        if (ball.GetComponent<Rigidbody>().velocity.z < 0) 
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(ball.position, ball.GetComponent<Rigidbody>().velocity, out hit, Mathf.Infinity))
+            {
+                if (hit.collider.CompareTag("Table"))  
+                {
+                    predictedBallPosition = hit.point;  
+
+                    ballPredictionMarker.SetActive(true);
+                    ballPredictionMarker.transform.position = new Vector3(predictedBallPosition.x, ballPredictionMarker.transform.position.y, predictedBallPosition.z);
+                }
+            }
+        }
+        else
+        {
+            ballPredictionMarker.SetActive(false); 
         }
     }
 }
-

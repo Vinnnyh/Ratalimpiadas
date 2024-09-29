@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bot : MonoBehaviour
 {
-    float speed = 20f;
+    float speed = 10f;
     float force = 6f;
     public Transform ball;
     public Transform aimTarget;
@@ -12,17 +12,20 @@ public class Bot : MonoBehaviour
     public Transform[] targets;
 
     Vector3 targetPosition;
-
-    // Start is called before the first frame update
+    float reactionTime = 0.018f;
+    float lastMoveTime = 0f;
     void Start()
     {
         targetPosition = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Move();
+        if (Time.time > lastMoveTime + reactionTime)
+        {
+            Move();
+            lastMoveTime = Time.time;  
+        }
     }
 
     void Move()
@@ -35,7 +38,7 @@ public class Bot : MonoBehaviour
     {
         int randomValue = Random.Range(0, targets.Length);
         return targets[randomValue].position;
-    } // Aquí se cierra correctamente el método PickTarget
+    } 
 
     private void OnTriggerEnter(Collider other)
     {

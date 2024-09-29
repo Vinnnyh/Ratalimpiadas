@@ -7,14 +7,23 @@ TagManager:
   - Ball
   - Wall
   - aimTarget
+  - AimTarget
+  - ballPredictionMarker
+  - Table
+  - Racket
+  - PlayerBody
+  - PlayerScorePlus
+  - BotScorePlus
+  - PlayerTable
+  - BotTable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PlayerBody
   - Water
   - UI
-  - 
+  - Ball
   - 
   - 
   - 
