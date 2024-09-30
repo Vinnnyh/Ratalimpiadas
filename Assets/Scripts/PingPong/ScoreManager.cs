@@ -68,6 +68,10 @@ public class ScoreManager : MonoBehaviour
         // Limpiar el puntaje al determinar el resultado
         ClearScore();
 
+        // Guardar el siguiente juego en PlayerPrefs (WeightliftingScene)
+        PlayerPrefs.SetString("NextGameScene", "halterofilia_escene");
+        PlayerPrefs.Save();
+
         if (playerScore == 0)
         {
             // El jugador no marcó puntos, mostrar la escena de derrota
