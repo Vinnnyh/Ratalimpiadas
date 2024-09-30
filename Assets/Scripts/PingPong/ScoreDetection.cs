@@ -34,12 +34,10 @@ public class ScoreDetection : MonoBehaviour
             {
                 if (ball.botBounces > 0)  // Si rebotó en la mesa del bot
                 {
-                    Debug.Log("Jugador anota! Rebote en la mesa del bot");
                     scoreManager.PlayerScores();  // El jugador anota si rebotó en la mesa del bot
                 }
                 else
                 {
-                    Debug.Log("Bot gana por falta de rebote en la mesa del bot");
                     scoreManager.BotScores();  // El bot gana si no rebotó en la mesa del bot
                 }
             }
@@ -48,12 +46,10 @@ public class ScoreDetection : MonoBehaviour
             {
                 if (ball.playerBounces > 0)  // Si rebotó en la mesa del jugador
                 {
-                    Debug.Log("Bot anota! Rebote en la mesa del jugador");
                     scoreManager.BotScores();  // El bot anota si rebotó en la mesa del jugador
                 }
                 else
                 {
-                    Debug.Log("Jugador gana por falta de rebote en la mesa del jugador");
                     scoreManager.PlayerScores();  // El jugador gana si no rebotó en la mesa del jugador
                 }
             }
@@ -68,4 +64,3 @@ public class ScoreDetection : MonoBehaviour
         pointAwarded = false;  // Permitir que se otorguen puntos nuevamente
     }
 }
-

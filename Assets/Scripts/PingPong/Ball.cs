@@ -22,7 +22,6 @@ public class Ball : MonoBehaviour
         transform.position = Initial_position;
         playerBounces = 0;
         botBounces = 0;
-        Debug.Log("Ball reset. Bounces reset.");
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -31,14 +30,12 @@ public class Ball : MonoBehaviour
         if (collision.transform.CompareTag("PlayerTable"))
         {
             playerBounces++;
-            Debug.Log("Rebote en la mesa del jugador: " + playerBounces + " rebote(s)");
         }
 
         // Detectar colisiones con la mesa del bot
         if (collision.transform.CompareTag("BotTable"))
         {
             botBounces++;
-            Debug.Log("Rebote en la mesa del bot: " + botBounces + " rebote(s)");
         }
 
         // Si la pelota toca un "Wall", reinicia la pelota sin otorgar el punto
