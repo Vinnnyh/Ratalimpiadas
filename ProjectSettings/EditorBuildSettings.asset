@@ -4,8 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Halterofilia.unity
-    guid: a21ac9e8d40b8e3408da46a3319c0e0b
+  m_Scenes: []
   m_configObjects: {}
