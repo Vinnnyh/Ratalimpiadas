@@ -447,10 +447,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052e31cc135b7704dbf8dac6c8063542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownText: {fileID: 0}
+  countdownText: {fileID: 1213502555}
   countdownTime: 4
   uiElementsToHide:
-  - {fileID: 0}
+  - {fileID: 692799370}
   - {fileID: 1252244763}
 --- !u!4 &865518152
 Transform:

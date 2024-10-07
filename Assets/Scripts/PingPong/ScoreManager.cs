@@ -69,7 +69,7 @@ public class ScoreManager : MonoBehaviour
         ClearScore();
 
         // Guardar el siguiente juego en PlayerPrefs (WeightliftingScene)
-        PlayerPrefs.SetString("NextGameScene", "halterofilia_escene");
+        PlayerPrefs.SetString("NextGameScene", "Halterofilia");
         PlayerPrefs.Save();
 
         if (playerScore == 0)

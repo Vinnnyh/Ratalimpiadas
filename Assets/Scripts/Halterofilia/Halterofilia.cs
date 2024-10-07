@@ -16,7 +16,12 @@ public class Halterofilia : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI levelText;
     private Double remainingTime = 0;
-
+    
+    void Start()
+    {
+        PlayerPrefs.SetString("CurrentGameMode", "Halterofilia");
+        PlayerPrefs.Save();  // Asegurar que el dato se guarde
+    }
     void Update()
     {
 

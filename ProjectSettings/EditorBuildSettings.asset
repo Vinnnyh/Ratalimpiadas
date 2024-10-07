@@ -4,5 +4,29 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: 83482603a09c7924b8c8268d1ace25e4
+  - enabled: 1
+    path: Assets/Scenes/PingPongScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ScoreDisplayScene.unity
+    guid: e470fb3d37ba52e43b81dfd0ce581288
+  - enabled: 1
+    path: Assets/Scenes/Medals/PlayerDefeatScene.unity
+    guid: 34a10562047bc61428836604f63e594b
+  - enabled: 1
+    path: Assets/Scenes/Medals/PlayerBronzeScene.unity
+    guid: cb5fd306b4cafeb42b8287cdf9828ef0
+  - enabled: 1
+    path: Assets/Scenes/Medals/PlayerSilverScene.unity
+    guid: 2275d58c8942eee43becb5a47cce4615
+  - enabled: 1
+    path: Assets/Scenes/Medals/PlayerGoldScene.unity
+    guid: aad51df5611b06f498991cbe19d39f6a
+  - enabled: 1
+    path: Assets/Scenes/Halterofilia.unity
+    guid: a21ac9e8d40b8e3408da46a3319c0e0b
   m_configObjects: {}

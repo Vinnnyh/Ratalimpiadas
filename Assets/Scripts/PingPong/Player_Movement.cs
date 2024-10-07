@@ -9,9 +9,9 @@ public class Player_Movement : MonoBehaviour
     public float speed = 3f;
     public float hitRadius = 1.5f; 
     public float maxChargeTime = 3f; 
-    public float baseHitForce = 5f;  
-    public float strongHitMultiplier = 1.2f; 
-    public float hitForceMultiplier = 10f; 
+    public float baseHitForce = 2f;  
+    public float strongHitMultiplier = 1f; 
+    public float hitForceMultiplier = 5f; 
 
     private BoxCollider racketCollider;  // Collider para el golpe de la raqueta
     bool hitting;
@@ -33,13 +33,13 @@ public class Player_Movement : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         transform.Translate(Vector3.right * h * speed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
         {
             hitting = true;
             hitChargeTime = 0f;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl) || Input.GetButtonDown("Fire1"))
         {
             hitting = true;
             hitChargeTime = 0f;  
@@ -50,13 +50,13 @@ public class Player_Movement : MonoBehaviour
             hitChargeTime += Time.deltaTime;  
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetButtonUp("Jump"))
         {
             hitting = false;
             PerformShot(false); 
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl))
+        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl) || Input.GetButtonUp("Fire1"))
         {
             hitting = false;
             PerformShot(true); 
@@ -66,33 +66,42 @@ public class Player_Movement : MonoBehaviour
     }
 
     private void PerformShot(bool isStrongHit)
+{
+    // Calcula el porcentaje de carga basado en el tiempo que se mantuvo presionado
+    float chargePercent = Mathf.Clamp01(hitChargeTime / maxChargeTime);
+
+    // Calcula la fuerza final con base en la fuerza base y el porcentaje de carga
+    float finalForce = baseHitForce + (chargePercent * hitForceMultiplier);
+
+    // Aumenta la fuerza si es un golpe fuerte
+    if (isStrongHit)
     {
-        float chargePercent = Mathf.Clamp01(hitChargeTime / maxChargeTime);
-
-        float finalForce = baseHitForce + (chargePercent * hitForceMultiplier);
-
-        if (isStrongHit)
-        {
-            finalForce *= strongHitMultiplier; 
-        }
-
-        // Solo golpea si la pelota está dentro del radio de golpeo
-        if (Vector3.Distance(transform.position, ball.position) <= hitRadius)
-        {
-            Vector3 hitDirection = Vector3.forward;
-
-            if (Input.GetKey(KeyCode.A))
-            {
-                hitDirection = new Vector3(-0.5f, 0, 1).normalized;  
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                hitDirection = new Vector3(0.5f, 0, 1).normalized; 
-            }
-
-            ball.GetComponent<Rigidbody>().velocity = hitDirection * finalForce + new Vector3(0, 3, 0); 
-        }
+        finalForce *= strongHitMultiplier; 
     }
+
+    // Solo golpea si la pelota está dentro del radio de golpeo
+    if (Vector3.Distance(transform.position, ball.position) <= hitRadius)
+    {
+        Vector3 hitDirection = Vector3.forward;
+
+        // Determina la dirección del golpe hacia la izquierda o derecha según el joystick o las teclas A/D
+        float h = Input.GetAxis("Horizontal");
+        if (h < 0 || Input.GetKey(KeyCode.A))
+        {
+            hitDirection = new Vector3(-0.5f, 0, 1).normalized;  
+        }
+        else if (h > 0 || Input.GetKey(KeyCode.D))
+        {
+            hitDirection = new Vector3(0.5f, 0, 1).normalized; 
+        }
+
+        // Aplica la fuerza calculada a la pelota
+        Vector3 finalVelocity = hitDirection * finalForce + new Vector3(0, 3, 0);  // Ajuste de elevación
+        ball.GetComponent<Rigidbody>().velocity = finalVelocity;
+
+        Debug.Log("Fuerza aplicada: " + finalForce + ", Carga: " + chargePercent);
+    }
+}
 
     // Detectar colisiones para asegurarse de que solo el RacketCollider golpea la pelota
     private void OnTriggerEnter(Collider other)
