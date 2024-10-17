@@ -15,10 +15,14 @@ public class Halterofilia : MonoBehaviour
 
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI levelText;
+    public TextMeshProUGUI timeLimitText;
     private Double remainingTime = 0;
+    private float TimeLimit = 150f;
 
     void Update()
     {
+        TimeLimit -= Time.deltaTime;
+        timeLimitText.text = "Tiempo: " + Mathf.Ceil((float)TimeLimit).ToString();
 
         if (Mathf.Ceil((float)remainingTime) == 40)
         {
@@ -26,11 +30,17 @@ public class Halterofilia : MonoBehaviour
             {
                 level++;
                 remainingTime = 0;
-            } 
+                TimeLimit = 150;
+            }
             else
             {
                 levelText.text = "Ganaste!";
             }
+        } 
+        else if(Mathf.Ceil((float)TimeLimit) == 0)
+        {
+            timeLimitText.text = "Perdiste!";
+            Debug.Log("Perdiste!");
         }
 
         switch (level)
@@ -52,15 +62,12 @@ public class Halterofilia : MonoBehaviour
         pulsaciones(difficulty);
 
         animator.SetInteger("Counter", (int)remainingTime);
-        //isReversed = animator.GetBool("Reverse");
-        
 
         // Verificar si se presiona la tecla Espacio
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
             keyPressCount++;
             remainingTime++;
-            Debug.Log("Pulsaciones: " + remainingTime);
         }
     }
    
