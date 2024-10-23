@@ -17,7 +17,7 @@ public class Halterofilia : MonoBehaviour
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI timeLimitText;
     private Double remainingTime = 0;
-    private float TimeLimit = 150f;
+    private float TimeLimit = 60f;
 
     void Update()
     {
@@ -26,15 +26,11 @@ public class Halterofilia : MonoBehaviour
 
         if (Mathf.Ceil((float)remainingTime) == 40)
         {
-            if (level < 4)
+            if (level <= 3)
             {
                 level++;
                 remainingTime = 0;
-                TimeLimit = 150;
-            }
-            else
-            {
-                levelText.text = "Ganaste!";
+                TimeLimit = 60;
             }
         } 
         else if(Mathf.Ceil((float)TimeLimit) == 0)
@@ -56,6 +52,9 @@ public class Halterofilia : MonoBehaviour
             case 3:
                 difficulty = 6;
                 levelText.text = "Nivel: " + level;
+                break;
+            case 4:
+                levelText.text = "Ganaste!";
                 break;
         }
 
