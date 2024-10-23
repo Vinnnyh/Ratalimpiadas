@@ -28,7 +28,19 @@ public class GoToGame : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             message.gameObject.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Interact"))
+            {
+                SceneManager.LoadScene("HalterofiliaScene");
+            }
+        }
+    }
+
+    private void OnTriggerEntry(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            message.gameObject.SetActive(true);
+            if (Input.GetButtonDown("Interact"))
             {
                 SceneManager.LoadScene("HalterofiliaScene");
             }

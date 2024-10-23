@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalkScript : MonoBehaviour
+public class Walk : MonoBehaviour
 {
     public float velocidad = 5f; // Velocidad de movimiento del personaje
     public Animator animator;
@@ -22,47 +22,69 @@ public class WalkScript : MonoBehaviour
     const string WALK_LEFT = "Walk Left";
     const string WALK_RIGHT = "Walk Right";
 
-    int movimientoHorizontal;
-    int movimientoVertical;
+    float movimientoHorizontal;
+    float movimientoVertical;
 
     void Update()
     {
         // Capturar los ejes de movimiento (joystick o teclas) en cada frame
-        movimientoHorizontal = Mathf.RoundToInt(Input.GetAxis("Horizontal")); // Teclado o mando para izquierda/derecha
-        movimientoVertical = Mathf.RoundToInt(Input.GetAxis("Vertical"));     // Teclado o mando para adelante/atrás
-        
+        movimientoHorizontal = Input.GetAxis("Horizontal");
+        movimientoVertical = Input.GetAxis("Vertical");
+
+        // Capturar input del teclado
+        if (Input.GetKey(KeyCode.A)) movimientoHorizontal = -1;
+        if (Input.GetKey(KeyCode.D)) movimientoHorizontal = 1;
+        if (Input.GetKey(KeyCode.W)) movimientoVertical = -1;
+        if (Input.GetKey(KeyCode.S)) movimientoVertical = 1;
+
         moverse();
     }
 
     void moverse()
     {
-        // Mover hacia atrás
-        if (Input.GetKey(KeyCode.S) || movimientoVertical > 0.1)
+        Vector3 movimiento = Vector3.zero;
+        bool isMoving = false;
+
+        // Priorizar movimiento horizontal
+        if (Mathf.Abs(movimientoHorizontal) >= 0.2f)
         {
-            cambiarAnimacion(STATE_FRONT, WALK_FRONT); // Cambiar animación a caminar hacia atrás
-            transform.Translate(movimientoAtras * velocidad * Time.deltaTime);
+            if (movimientoHorizontal > 0)
+            {
+                movimiento = movimientoDer;
+                cambiarAnimacion(STATE_RIGHT, WALK_RIGHT);
+            }
+            else
+            {
+                movimiento = movimientoIzq;
+                cambiarAnimacion(STATE_LEFT, WALK_LEFT);
+            }
+            isMoving = true;
         }
-        // Mover hacia adelante
-        else if (Input.GetKey(KeyCode.W) || movimientoVertical < 0)
+        // Si no hay movimiento horizontal, considerar el vertical
+        else if (Mathf.Abs(movimientoVertical) >= 0.2f)
         {
-            cambiarAnimacion(STATE_BACK, WALK_BACK); // Cambiar animación a caminar hacia adelante
-            transform.Translate(movimientoDelante * velocidad * Time.deltaTime);
+            if (movimientoVertical > 0)
+            {
+                movimiento = movimientoAtras;
+                cambiarAnimacion(STATE_FRONT, WALK_FRONT);
+            }
+            else
+            {
+                movimiento = movimientoDelante;
+                cambiarAnimacion(STATE_BACK, WALK_BACK);
+            }
+            isMoving = true;
         }
-        // Mover hacia la derecha
-        else if (Input.GetKey(KeyCode.D) || movimientoHorizontal > 0)
+
+        // Aplicar el movimiento
+        if (isMoving)
         {
-            cambiarAnimacion(STATE_RIGHT, WALK_RIGHT); // Cambiar animación a caminar hacia la derecha
-            transform.Translate(movimientoDer * velocidad * Time.deltaTime);
-        }
-        // Mover hacia la izquierda
-        else if (Input.GetKey(KeyCode.A) || movimientoHorizontal < 0)
-        {
-            cambiarAnimacion(STATE_LEFT, WALK_LEFT); // Cambiar animación a caminar hacia la izquierda
-            transform.Translate(movimientoIzq * velocidad * Time.deltaTime);
+            transform.Translate(movimiento * velocidad * Time.deltaTime);
+            animator.SetBool("Walk", true);
         }
         else
         {
-            animator.SetBool("Walk", false); // Detener la animación de caminar cuando no hay movimiento
+            animator.SetBool("Walk", false);
         }
     }
 
