@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    Vector3 Initial_position;
-    Rigidbody rb;
+    private Vector3 initialPosition;
+    private Rigidbody rb;
 
     public int playerBounces = 0;  // Rebotes en la mesa del jugador
     public int botBounces = 0;     // Rebotes en la mesa del bot
 
     void Start()
     {
-        Initial_position = transform.position;
+        initialPosition = transform.position;
         rb = GetComponent<Rigidbody>();
     }
 
+    // Método para resetear la posición de la pelota y los contadores de rebotes
     public void ResetBall()
     {
-        rb.velocity = Vector3.zero;
-        transform.position = Initial_position;
+        rb.velocity = Vector3.zero;  // Detener la pelota
+        transform.position = initialPosition;  // Reiniciar la posición de la pelota
         playerBounces = 0;
         botBounces = 0;
     }
@@ -45,6 +46,7 @@ public class Ball : MonoBehaviour
         }
     }
 
+    // Método para verificar si la pelota ha rebotado al menos una vez en cualquier mesa
     public bool HasBouncedAtLeastOnce()
     {
         return (playerBounces > 0 || botBounces > 0);  // Verifica que haya rebotado en cualquier mesa
