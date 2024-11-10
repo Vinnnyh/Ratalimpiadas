@@ -1737,6 +1737,7 @@ MonoBehaviour:
   animator: {fileID: 2120489676}
   timerText: {fileID: 1441002316}
   levelText: {fileID: 1255354157}
+  timeLimitText: {fileID: 1293648067}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
