@@ -1619,7 +1619,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c7a2b74fff24c24da76c54fbc646844, type: 2}
+  - {fileID: 2100000, guid: 3b6d1a86a4bb1f44ab512d32734bf11d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1734,10 +1734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d335dae6f45484ea1918347fbb27ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 2120489676}
-  timerText: {fileID: 1441002316}
-  levelText: {fileID: 1255354157}
-  timeLimitText: {fileID: 1293648067}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
