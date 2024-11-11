@@ -354,8 +354,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Player: 0 - Bot: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1834,10 +1834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31305075f7ba9684ba80a6dc40484179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 2034843571}
-  aimTarget: {fileID: 2087678564}
-  targets:
-  - {fileID: 2087678564}
 --- !u!1 &1435642973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,14 +1865,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e915555e5b5c3474aad846f1dc7d948b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 2034843571}
-  ballPredictionMarker: {fileID: 2087678560}
-  speed: 3
-  hitRadius: 1.5
-  maxChargeTime: 4
-  baseHitForce: 6
-  strongHitMultiplier: 1.5
-  hitForceMultiplier: 10
 --- !u!23 &1435642976
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2109,8 +2097,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2456,8 +2444,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3301,8 +3289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c85d7c7d1edf84f892c807cea40f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBounces: 0
-  botBounces: 0
 --- !u!96 &2034843574
 TrailRenderer:
   serializedVersion: 3
