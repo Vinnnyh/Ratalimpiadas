@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Map/PausaMenuManager.cs.meta
+guid: 954ca76deb9178d40b765c427bd1b45e
+========
+guid: 4116c14001adcbf4aa3a3fb57824b6d5
+>>>>>>>> ping-pong:Assets/Scripts/MainMenu/ControllerMouse.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
