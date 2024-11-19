@@ -4,26 +4,48 @@ using TMPro;
 
 public class PingPongGameController : MonoBehaviour
 {
-    public int playerScore = 0;  // Puntos del jugador
-    public int botScore = 0;     // Puntos del bot
-    public TextMeshProUGUI scoreText;   // Referencia al marcador de puntos en la UI
-    public TextMeshProUGUI timerText;   // Referencia al temporizador en la UI
-    public TextMeshProUGUI messageText; // Referencia al mensaje de ronda o puntaje ("GREAT", "OH NO")
-    public Ball ball;  // Referencia a la pelota
-    public Player_Movement player; // Referencia al jugador
-    public Bot bot; // Referencia al bot
+    public int playerScore = 0; 
+    public int botScore = 0;     
+    public TextMeshProUGUI scoreText; 
+    public TextMeshProUGUI timerText;   
+    public TextMeshProUGUI messageText;
+    public Ball ball;  
+    public Player_Movement player;
+    public Bot bot; 
 
-    private float roundTime = 5f;  // Tiempo por ronda (en segundos)
+    private float roundTime = 20f;  // Tiempo por ronda (en segundos)
     private float currentRoundTime;
     private int currentRound = 1;
-    private int totalRounds = 3;  // Total de rondas en el juego
-    private bool isPaused = false;
+    private int totalRounds = 3;  
+    private bool isPaused = true;
+    public Animator introAnimator;  
 
     private void Start()
     {
         currentRoundTime = roundTime;
         UpdateScoreUI();
         UpdateTimerUI();
+        messageText.gameObject.SetActive(false);
+        
+        if (introAnimator != null)
+        {
+            // Reproduce la animación de introducción y espera su final
+            introAnimator.Play("IntroAnimation");
+            StartCoroutine(StartGameAfterIntro());
+        }
+        else
+        {
+            isPaused = false;
+            StartCoroutine(RoundTimer());
+        }
+    }
+
+    private IEnumerator StartGameAfterIntro()
+    {
+        // Espera hasta que la animación de introducción termine
+        yield return new WaitUntil(() => introAnimator.GetCurrentAnimatorStateInfo(0).IsName("Hidden"));
+
+        isPaused = false;
         messageText.gameObject.SetActive(false);
         StartCoroutine(RoundTimer());
     }
@@ -47,14 +69,14 @@ public class PingPongGameController : MonoBehaviour
     {
         playerScore++;
         UpdateScoreUI();
-        StartCoroutine(ShowMessage("GREAT", 3));
+        StartCoroutine(ShowMessage("GREAT", 2));
     }
 
     public void BotScores()
     {
         botScore++;
         UpdateScoreUI();
-        StartCoroutine(ShowMessage("OH NO", 3));
+        StartCoroutine(ShowMessage("OH NO", 2));
     }
 
     private void UpdateScoreUI()

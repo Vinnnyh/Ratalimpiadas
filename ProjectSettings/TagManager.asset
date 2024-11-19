@@ -16,6 +16,8 @@ TagManager:
   - BotScorePlus
   - PlayerTable
   - BotTable
+  - End
+  - Start
   layers:
   - Default
   - TransparentFX

@@ -4,65 +4,84 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
-    public Transform ball;  
-    public GameObject ballPredictionMarker; 
+    public Transform ball;
+    public GameObject ballPredictionMarker;
+    public GameObject botTable;
     public float speed = 3f;
-    public float hitRadius = 1.5f; 
-    public float maxChargeTime = 3f; 
-    public float baseHitForce = 5f;  
-    public float strongHitMultiplier = 1.2f; 
-    public float hitForceMultiplier = 10f; 
+    public float markerSpeed = 5f;
+    public float hitRadius = 1.5f;
+    public float maxChargeTime = 3f;
+    public float baseHitForce = 5f;
+    public float strongHitMultiplier = 1.2f;
+    public float hitForceMultiplier = 10f;
 
-    private BoxCollider racketCollider;  // Collider para el golpe de la raqueta
+    private Animator animator;
     bool hitting;
     float hitChargeTime = 0f;
-
     Vector3 predictedBallPosition;
+
+    private Vector3 botTableMinBounds;
+    private Vector3 botTableMaxBounds;
 
     private void Start()
     {
-        ballPredictionMarker.SetActive(false); 
+        animator = GetComponentInChildren<Animator>();
 
-        // Buscar el BoxCollider de la raqueta en el objeto hijo "RacketCollider"
-        racketCollider = GameObject.Find("RacketCollider").GetComponent<BoxCollider>();  
+        if (ballPredictionMarker != null)
+        {
+            ballPredictionMarker.SetActive(true);
+        }
+
+        // Get the bounds of BotTable in world space
+        BoxCollider botTableCollider = botTable.GetComponent<BoxCollider>();
+        botTableMinBounds = botTableCollider.bounds.min;
+        botTableMaxBounds = botTableCollider.bounds.max;
     }
 
     void Update()
     {
-        // Movimiento del jugador
+        // Player movement with left joystick or A and D keys
         float h = Input.GetAxisRaw("Horizontal");
         transform.Translate(Vector3.right * h * speed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        // Control BallPredictionMarker with right joystick or arrow keys
+        MovePredictionMarker();
+
+        // Hit control with Space key or A button on the controller
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
         {
             hitting = true;
             hitChargeTime = 0f;
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
-        {
-            hitting = true;
-            hitChargeTime = 0f;  
+            animator.SetTrigger("Hit");
         }
 
         if (hitting)
         {
-            hitChargeTime += Time.deltaTime;  
+            hitChargeTime += Time.deltaTime;
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetButtonUp("Jump"))
         {
             hitting = false;
-            PerformShot(false); 
+            PerformShot(false);
         }
+    }
 
-        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl))
-        {
-            hitting = false;
-            PerformShot(true); 
-        }
+    private void MovePredictionMarker()
+    {
+        // Move BallPredictionMarker with right joystick or arrow keys
+        float markerHorizontal = Input.GetAxisRaw("MarkerHorizontal") + (Input.GetKey(KeyCode.RightArrow) ? 1 : 0) - (Input.GetKey(KeyCode.LeftArrow) ? 1 : 0);
+        float markerVertical = Input.GetAxisRaw("MarkerVertical") + (Input.GetKey(KeyCode.UpArrow) ? 1 : 0) - (Input.GetKey(KeyCode.DownArrow) ? 1 : 0);
 
-        PredictBotShot();  
+        Vector3 markerMovement = new Vector3(markerHorizontal, 0, markerVertical) * markerSpeed * Time.deltaTime;
+        ballPredictionMarker.transform.Translate(markerMovement);
+
+        // Clamp the marker within BotTable boundaries
+        Vector3 clampedPosition = ballPredictionMarker.transform.position;
+        clampedPosition.x = Mathf.Clamp(clampedPosition.x, botTableMinBounds.x, botTableMaxBounds.x);
+        clampedPosition.z = Mathf.Clamp(clampedPosition.z, botTableMinBounds.z, botTableMaxBounds.z);
+
+        ballPredictionMarker.transform.position = clampedPosition;
     }
 
     private void PerformShot(bool isStrongHit)
@@ -73,60 +92,14 @@ public class Player_Movement : MonoBehaviour
 
         if (isStrongHit)
         {
-            finalForce *= strongHitMultiplier; 
+            finalForce *= strongHitMultiplier;
         }
 
-        // Solo golpea si la pelota está dentro del radio de golpeo
         if (Vector3.Distance(transform.position, ball.position) <= hitRadius)
         {
-            Vector3 hitDirection = Vector3.forward;
+            Vector3 hitDirection = (ballPredictionMarker.transform.position - transform.position).normalized;
 
-            if (Input.GetKey(KeyCode.A))
-            {
-                hitDirection = new Vector3(-0.5f, 0, 1).normalized;  
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                hitDirection = new Vector3(0.5f, 0, 1).normalized; 
-            }
-
-            ball.GetComponent<Rigidbody>().velocity = hitDirection * finalForce + new Vector3(0, 3, 0); 
-        }
-    }
-
-    // Detectar colisiones para asegurarse de que solo el RacketCollider golpea la pelota
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Ball"))
-        {
-            // Solo permite golpear si el collider tiene el tag "Racket"
-            if (other.transform.CompareTag("Racket"))
-            {
-                Debug.Log("La pelota fue golpeada por la raqueta.");
-                PerformShot(false);  // Realiza el golpe aquí
-            }
-        }
-    }
-
-    private void PredictBotShot()
-    {
-        if (ball.GetComponent<Rigidbody>().velocity.z < 0) 
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(ball.position, ball.GetComponent<Rigidbody>().velocity, out hit, Mathf.Infinity))
-            {
-                if (hit.collider.CompareTag("Table"))  
-                {
-                    predictedBallPosition = hit.point;  
-
-                    ballPredictionMarker.SetActive(true);
-                    ballPredictionMarker.transform.position = new Vector3(predictedBallPosition.x, ballPredictionMarker.transform.position.y, predictedBallPosition.z);
-                }
-            }
-        }
-        else
-        {
-            ballPredictionMarker.SetActive(false); 
+            ball.GetComponent<Rigidbody>().velocity = hitDirection * finalForce + new Vector3(0, 3, 0);
         }
     }
 }

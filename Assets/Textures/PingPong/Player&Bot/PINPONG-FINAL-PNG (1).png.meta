@@ -1,0 +1,1095 @@
+fileFormatVersion: 2
+guid: 060dca72ad85de645aaafbf0b25cb935
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 926
+        width: 147
+        height: 130
+      alignment: 9
+      pivot: {x: 0.6234958, y: 0.44001982}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8431913b25649fe4ca2ec63bd481212e
+      internalID: -1013259317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_1
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 926
+        width: 147
+        height: 130
+      alignment: 9
+      pivot: {x: 0.65, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd82423a646d2794b8c3f8828b9206df
+      internalID: 1940700942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_2
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 926
+        width: 157
+        height: 128
+      alignment: 9
+      pivot: {x: 0.65, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a7a3f799d35ea429d2d58b65099eea
+      internalID: -2045955492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_3
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 925
+        width: 154
+        height: 128
+      alignment: 9
+      pivot: {x: 0.65, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c80dee5225a3b4b8c1c8ca4e8654f6
+      internalID: 70078899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_4
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 925
+        width: 159
+        height: 128
+      alignment: 9
+      pivot: {x: 0.65, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe47054b376af549aa12ee18b70928e
+      internalID: -1708942231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_5
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 925
+        width: 148
+        height: 128
+      alignment: 9
+      pivot: {x: 0.65, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7594ab0a95f80ba48b866d63bba97236
+      internalID: -374456655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 925
+        width: 148
+        height: 128
+      alignment: 9
+      pivot: {x: 0.65, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c8daaba56f9294f9f557b459f25f24
+      internalID: 1852072319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 925
+        width: 158
+        height: 128
+      alignment: 9
+      pivot: {x: 0.6, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe194ef457848e14687b851054a41405
+      internalID: 1273114429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 926
+        width: 150
+        height: 127
+      alignment: 9
+      pivot: {x: 0.62, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80770e1e84807b44a0a0ce36e654297
+      internalID: 1595331893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 929
+        width: 153
+        height: 127
+      alignment: 9
+      pivot: {x: 0.62, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a40d9a1971487a44af3940f6e6dbed5
+      internalID: -196106513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 926
+        width: 149
+        height: 137
+      alignment: 9
+      pivot: {x: 0.56, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454845a2d1574364c9013edc4d54d446
+      internalID: -1896603759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_11
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 755
+        width: 149
+        height: 137
+      alignment: 9
+      pivot: {x: 0.56, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb65779d61ef054cbab16c19d12282c
+      internalID: -727817760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_12
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 586
+        width: 140
+        height: 137
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe0f49db63b8d24d8db818ae17cec55
+      internalID: 30242956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_13
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 585
+        width: 146
+        height: 137
+      alignment: 9
+      pivot: {x: 0.31, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268256f04e1adc840b025aaa0601549a
+      internalID: 1427253214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_14
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 585
+        width: 143
+        height: 138
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d1fefadae48f74887268377d0d87dc
+      internalID: 352447610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_15
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 585
+        width: 163
+        height: 135
+      alignment: 9
+      pivot: {x: 0.4, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bdd0bbbcfdb1c49abced85867dbfa7
+      internalID: 1915778837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_16
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 585
+        width: 163
+        height: 134
+      alignment: 9
+      pivot: {x: 0.4, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7bfad107c8c5c4d8a0108b2f65f69c
+      internalID: 154969939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_17
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 585
+        width: 161
+        height: 133
+      alignment: 9
+      pivot: {x: 0.4, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3a086b720c8d64f8a2c6a4991fba45
+      internalID: 446770075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_18
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 585
+        width: 163
+        height: 132
+      alignment: 9
+      pivot: {x: 0.4, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb41068dcaae8a4f9306298f71a8d5a
+      internalID: 1961782766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_19
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 586
+        width: 135
+        height: 132
+      alignment: 9
+      pivot: {x: 0.3, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e60c2778284a404aa4e35c509a757cc
+      internalID: -232323799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_20
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 585
+        width: 137
+        height: 132
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ff2bf936a3c2f41be683f4f311dd74
+      internalID: -1524850637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_21
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 583
+        width: 171
+        height: 133
+      alignment: 9
+      pivot: {x: 0.4, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14d879a5c500a5439601699a3618480
+      internalID: 2044823721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_22
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 408
+        width: 166
+        height: 135
+      alignment: 9
+      pivot: {x: 0.4, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8890ed7793f5f194bb5571939110534b
+      internalID: 796268407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_23
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 408
+        width: 141
+        height: 139
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa84f1eccdfa1e4dbbc963f230a861b
+      internalID: 1937201330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_24
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 235
+        width: 150
+        height: 138
+      alignment: 9
+      pivot: {x: 0.57, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82addf2f7e3716a4cb18a04ac7afaad7
+      internalID: -1190858129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_25
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 233
+        width: 150
+        height: 138
+      alignment: 9
+      pivot: {x: 0.57, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2bc8cb96f214c4eb429ff1ea47e53c
+      internalID: -915900221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_26
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 234
+        width: 149
+        height: 137
+      alignment: 9
+      pivot: {x: 0.57, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666b4192497ffa644bae42982b2ef1a7
+      internalID: 1003583164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_27
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 233
+        width: 149
+        height: 137
+      alignment: 9
+      pivot: {x: 0.57, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b56034767d8a0340bac3e510c0a37fc
+      internalID: 1699184658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_28
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 235
+        width: 147
+        height: 137
+      alignment: 9
+      pivot: {x: 0.57, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c015b30e8f3f33543b259170b98bd8ec
+      internalID: -1187173536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_29
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 233
+        width: 145
+        height: 137
+      alignment: 9
+      pivot: {x: 0.57, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f37032581bec384d92a060e5e98d1e0
+      internalID: -733656605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_30
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 234
+        width: 147
+        height: 138
+      alignment: 9
+      pivot: {x: 0.57, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae676e762a53656489aa9703ae48bbdf
+      internalID: 222398482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_31
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 235
+        width: 149
+        height: 138
+      alignment: 9
+      pivot: {x: 0.57, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2c7aaff621e28438e981ff6c31ecd3
+      internalID: -584418089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_32
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 234
+        width: 149
+        height: 139
+      alignment: 9
+      pivot: {x: 0.57, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc98bc14c67df549a42e3dae359ab8a
+      internalID: -720876331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_33
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 234
+        width: 150
+        height: 138
+      alignment: 9
+      pivot: {x: 0.57, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbc3e3f6642ff04d9ecc11c3ba9b5c6
+      internalID: -2115102730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_34
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 18
+        width: 142
+        height: 139
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103ed0b3fe05cbc4c8e7093234c878c5
+      internalID: 1247182781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_35
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 18
+        width: 143
+        height: 138
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc81d69ce162584fa4ee5776df32e81
+      internalID: -827492688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_36
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 18
+        width: 144
+        height: 137
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99219714738e8f4da408ef71549c530
+      internalID: 267457355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_37
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 18
+        width: 144
+        height: 136
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a9e71dc3b230b4ca4d9c3bcbd54668
+      internalID: -29777899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_38
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 18
+        width: 144
+        height: 135
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f2d3a7a7b63ba419cdb9cbfc8ccbd2
+      internalID: 1430675387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_39
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 17
+        width: 144
+        height: 134
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136255c15f80f2c42a13ed45b9d997ed
+      internalID: -877097767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_40
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 16
+        width: 144
+        height: 135
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bb905297fd51f44aa3af08116b6793
+      internalID: 1394439359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_41
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 17
+        width: 144
+        height: 136
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591b65869f77a71439d3710f0160aeba
+      internalID: -2068278769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_42
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 16
+        width: 144
+        height: 137
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c87869620181f41b0151edc0383b5c
+      internalID: -1086235842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PINPONG-FINAL-PNG (1)_43
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 16
+        width: 143
+        height: 138
+      alignment: 9
+      pivot: {x: 0.28, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9bdde2570d2e864dae4a92dc21b2389
+      internalID: -167303239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PINPONG-FINAL-PNG (1)_0: -1013259317
+      PINPONG-FINAL-PNG (1)_1: 1940700942
+      PINPONG-FINAL-PNG (1)_10: -1896603759
+      PINPONG-FINAL-PNG (1)_11: -727817760
+      PINPONG-FINAL-PNG (1)_12: 30242956
+      PINPONG-FINAL-PNG (1)_13: 1427253214
+      PINPONG-FINAL-PNG (1)_14: 352447610
+      PINPONG-FINAL-PNG (1)_15: 1915778837
+      PINPONG-FINAL-PNG (1)_16: 154969939
+      PINPONG-FINAL-PNG (1)_17: 446770075
+      PINPONG-FINAL-PNG (1)_18: 1961782766
+      PINPONG-FINAL-PNG (1)_19: -232323799
+      PINPONG-FINAL-PNG (1)_2: -2045955492
+      PINPONG-FINAL-PNG (1)_20: -1524850637
+      PINPONG-FINAL-PNG (1)_21: 2044823721
+      PINPONG-FINAL-PNG (1)_22: 796268407
+      PINPONG-FINAL-PNG (1)_23: 1937201330
+      PINPONG-FINAL-PNG (1)_24: -1190858129
+      PINPONG-FINAL-PNG (1)_25: -915900221
+      PINPONG-FINAL-PNG (1)_26: 1003583164
+      PINPONG-FINAL-PNG (1)_27: 1699184658
+      PINPONG-FINAL-PNG (1)_28: -1187173536
+      PINPONG-FINAL-PNG (1)_29: -733656605
+      PINPONG-FINAL-PNG (1)_3: 70078899
+      PINPONG-FINAL-PNG (1)_30: 222398482
+      PINPONG-FINAL-PNG (1)_31: -584418089
+      PINPONG-FINAL-PNG (1)_32: -720876331
+      PINPONG-FINAL-PNG (1)_33: -2115102730
+      PINPONG-FINAL-PNG (1)_34: 1247182781
+      PINPONG-FINAL-PNG (1)_35: -827492688
+      PINPONG-FINAL-PNG (1)_36: 267457355
+      PINPONG-FINAL-PNG (1)_37: -29777899
+      PINPONG-FINAL-PNG (1)_38: 1430675387
+      PINPONG-FINAL-PNG (1)_39: -877097767
+      PINPONG-FINAL-PNG (1)_4: -1708942231
+      PINPONG-FINAL-PNG (1)_40: 1394439359
+      PINPONG-FINAL-PNG (1)_41: -2068278769
+      PINPONG-FINAL-PNG (1)_42: -1086235842
+      PINPONG-FINAL-PNG (1)_43: -167303239
+      PINPONG-FINAL-PNG (1)_5: -374456655
+      PINPONG-FINAL-PNG (1)_6: 1852072319
+      PINPONG-FINAL-PNG (1)_7: 1273114429
+      PINPONG-FINAL-PNG (1)_8: 1595331893
+      PINPONG-FINAL-PNG (1)_9: -196106513
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
