@@ -9,10 +9,11 @@ public class GoToGame : MonoBehaviour
 
     public TextMeshProUGUI message;
     public string text;
+    public string scene;
 
     private void Update()
     {
-        message.text = "Pulsa E para ingresar a " + text + ".";
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -27,22 +28,11 @@ public class GoToGame : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            message.text = "Pulsa E para ingresar a " + text + ".";
             message.gameObject.SetActive(true);
             if (Input.GetButtonDown("Interact"))
             {
-                SceneManager.LoadScene("HalterofiliaScene");
-            }
-        }
-    }
-
-    private void OnTriggerEntry(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            message.gameObject.SetActive(true);
-            if (Input.GetButtonDown("Interact"))
-            {
-                SceneManager.LoadScene("HalterofiliaScene");
+                SceneManager.LoadScene(scene);
             }
         }
     }
