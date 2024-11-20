@@ -35,18 +35,23 @@ public class SwimmingController : MonoBehaviour
         }
 
         // Alternativa para los joysticks
-        if (Input.GetAxis("VerticalLeft") > 0 && canPressW)
-        {
-            SwimForward();
-            canPressW = false;
-            canPressS = true; // Ahora solo el joystick derecho puede avanzar
+        if ((Input.GetAxis("AtletismTriggerLeft") < 0f && canPressW) && (Input.GetAxis("AtletismTriggerRight") < 0f && canPressS)) {
+
+        } else {
+            if (Input.GetAxis("AtletismTriggerLeft") < 0f && canPressW)
+            {
+                SwimForward();
+                canPressW = false;
+                canPressS = true; // Ahora solo el joystick derecho puede avanzar
+            }
+            else if (Input.GetAxis("AtletismTriggerRight") < 0f && canPressS)
+            {
+                SwimForward();
+                canPressS = false;
+                canPressW = true; // Ahora solo el joystick izquierdo puede avanzar
+            }
         }
-        else if (Input.GetAxis("VerticalRight") > 0 && canPressS)
-        {
-            SwimForward();
-            canPressS = false;
-            canPressW = true; // Ahora solo el joystick izquierdo puede avanzar
-        }
+        
     }
 
     private void SwimForward()
