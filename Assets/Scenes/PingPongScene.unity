@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 13487012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.08, z: 0}
+  m_LocalPosition: {x: 0, y: -0.124, z: 0}
   m_LocalScale: {x: 1, y: 0.96794, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1031,8 +1031,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Player: 0 - Bot: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
+  m_sharedMaterial: {fileID: -6536973832372438565, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6241,8 +6241,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
+  m_sharedMaterial: {fileID: -6536973832372438565, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6984,8 +6984,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
+  m_sharedMaterial: {fileID: -6536973832372438565, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
