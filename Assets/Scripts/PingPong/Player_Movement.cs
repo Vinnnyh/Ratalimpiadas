@@ -32,22 +32,33 @@ public class Player_Movement : MonoBehaviour
             ballPredictionMarker.SetActive(true);
         }
 
-        // Get the bounds of BotTable in world space
+        // Obtener los límites de BotTable en el espacio del mundo
         BoxCollider botTableCollider = botTable.GetComponent<BoxCollider>();
         botTableMinBounds = botTableCollider.bounds.min;
         botTableMaxBounds = botTableCollider.bounds.max;
+
+        // Depuración para verificar los límites
+        Debug.Log("BotTable Min Bounds: " + botTableMinBounds);
+        Debug.Log("BotTable Max Bounds: " + botTableMaxBounds);
+
+        // Centramos el marcador dentro de los límites del BotTable
+        ballPredictionMarker.transform.position = new Vector3(
+            (botTableMinBounds.x + botTableMaxBounds.x) / 2,
+            ballPredictionMarker.transform.position.y,
+            (botTableMinBounds.z + botTableMaxBounds.z) / 2
+        );
     }
 
     void Update()
     {
-        // Player movement with left joystick or A and D keys
+        // Movimiento del jugador con joystick izquierdo o teclas A y D
         float h = Input.GetAxisRaw("Horizontal");
         transform.Translate(Vector3.right * h * speed * Time.deltaTime);
 
-        // Control BallPredictionMarker with right joystick or arrow keys
+        // Control del BallPredictionMarker con joystick derecho o flechas
         MovePredictionMarker();
 
-        // Hit control with Space key or A button on the controller
+        // Control de golpe con Space o A en el mando
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
         {
             hitting = true;
@@ -69,14 +80,14 @@ public class Player_Movement : MonoBehaviour
 
     private void MovePredictionMarker()
     {
-        // Move BallPredictionMarker with right joystick or arrow keys
+        // Mover el BallPredictionMarker con joystick derecho o flechas
         float markerHorizontal = Input.GetAxisRaw("MarkerHorizontal") + (Input.GetKey(KeyCode.RightArrow) ? 1 : 0) - (Input.GetKey(KeyCode.LeftArrow) ? 1 : 0);
         float markerVertical = Input.GetAxisRaw("MarkerVertical") + (Input.GetKey(KeyCode.UpArrow) ? 1 : 0) - (Input.GetKey(KeyCode.DownArrow) ? 1 : 0);
 
         Vector3 markerMovement = new Vector3(markerHorizontal, 0, markerVertical) * markerSpeed * Time.deltaTime;
         ballPredictionMarker.transform.Translate(markerMovement);
 
-        // Clamp the marker within BotTable boundaries
+        // Limitar el marcador dentro de los límites de BotTable
         Vector3 clampedPosition = ballPredictionMarker.transform.position;
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, botTableMinBounds.x, botTableMaxBounds.x);
         clampedPosition.z = Mathf.Clamp(clampedPosition.z, botTableMinBounds.z, botTableMaxBounds.z);
@@ -99,7 +110,9 @@ public class Player_Movement : MonoBehaviour
         {
             Vector3 hitDirection = (ballPredictionMarker.transform.position - transform.position).normalized;
 
-            ball.GetComponent<Rigidbody>().velocity = hitDirection * finalForce + new Vector3(0, 3, 0);
+            // Ajustar la fuerza de disparo con altura ajustable
+            float shotHeight = 4.0f;
+            ball.GetComponent<Rigidbody>().velocity = hitDirection * finalForce + new Vector3(0, shotHeight, 0);
         }
     }
 }

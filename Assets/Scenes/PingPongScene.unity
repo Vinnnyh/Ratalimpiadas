@@ -690,7 +690,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bcb28de090e53fa469b9980beb78e338, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3324,7 +3324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e14e8511e6dc34e95974b251c040be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {fileID: 2125483278}
+  player: {fileID: 1435642978}
+  focusPoint: {fileID: 2125483278}
+  smoothSpeed: 0.125
   moveDuration: 0.5
   pauseBeforeStart: 0
 --- !u!1 &969728120
@@ -5292,8 +5294,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 0, z: 2.946946}
-  m_Center: {x: 0, y: 0, z: -0.33808553}
+  m_Size: {x: 4, y: 0, z: 2.9242544}
+  m_Center: {x: 0, y: 0, z: -0.3267398}
 --- !u!1 &1415169372
 GameObject:
   m_ObjectHideFlags: 0
@@ -5415,6 +5417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4dc11609a83944893d25121b514cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  force: 6
+  hitHeight: 4
   ball: {fileID: 2034843571}
   aimTarget: {fileID: 2087678564}
   targets:
