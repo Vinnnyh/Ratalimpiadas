@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Bot : MonoBehaviour
 {
-    float speed = 10f;
-    float force = 6f;
+    public float speed = 10f;
+    public float force = 6f;
+    public float hitHeight = 4f; 
     public Transform ball;
     public Transform aimTarget;
     public Transform[] targets;
-    
-    private Animator animator;  // Referencia al Animator
+
+    private Animator animator;
     Vector3 targetPosition;
     float reactionTime = 0.018f;
     float lastMoveTime = 0f;
@@ -19,7 +20,7 @@ public class Bot : MonoBehaviour
     {
         targetPosition = transform.position;
 
-        // Obtén el Animator del objeto o de un objeto hijo
+        // Obtener el Animator del objeto o de un objeto hijo
         animator = GetComponentInChildren<Animator>();
         if (animator == null)
         {
@@ -33,7 +34,7 @@ public class Bot : MonoBehaviour
         if (Time.time > lastMoveTime + reactionTime)
         {
             Move();
-            lastMoveTime = Time.time;  
+            lastMoveTime = Time.time;
         }
     }
 
@@ -43,12 +44,12 @@ public class Bot : MonoBehaviour
         targetPosition.x = ball.position.x;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
-    
+
     Vector3 PickTarget()
     {
         int randomValue = Random.Range(0, targets.Length);
         return targets[randomValue].position;
-    } 
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -63,7 +64,7 @@ public class Bot : MonoBehaviour
 
             // Calcular la dirección de golpe y aplicar fuerza
             Vector3 dir = PickTarget() - transform.position;
-            other.GetComponent<Rigidbody>().velocity = dir.normalized * force + new Vector3(0, 4, 0);
+            other.GetComponent<Rigidbody>().velocity = dir.normalized * force + new Vector3(0, hitHeight, 0); // Usar hitHeight para controlar la altura
         }
     }
 }
