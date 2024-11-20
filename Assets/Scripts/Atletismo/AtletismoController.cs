@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AtletismoController : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class AtletismoController : MonoBehaviour
 
     void Update()
     {
+        // Depurar los valores de los gatillos
+        Debug.Log("AtletismTriggerLeft: " + Input.GetAxis("AtletismTriggerLeft"));
+        Debug.Log("AtletismTriggerRight: " + Input.GetAxis("AtletismTriggerRight"));
+
         // Movimiento con teclado
         if (Input.GetKeyDown(KeyCode.A) && canPressLeft) // Detectar la tecla A
         {
@@ -30,18 +35,27 @@ public class AtletismoController : MonoBehaviour
             canPressLeft = true; // Ahora solo A o LT puede avanzar
         }
 
-        // Movimiento con gatillos
-        if (Input.GetAxis("AtletismTriggerLeft") > 0.5f && canPressLeft) // Detectar gatillo izquierdo
+        
+
+        if (Input.GetAxis("AtletismTriggerLeft") < 0f && Input.GetAxis("AtletismTriggerRight") < 0f )
         {
-            MoveForward();
-            canPressLeft = false;
-            canPressRight = true; // Ahora solo RT o D puede avanzar
-        }
-        else if (Input.GetAxis("AtletismTriggerRight") > 0.5f && canPressRight) // Detectar gatillo derecho
-        {
-            MoveForward();
-            canPressRight = false;
-            canPressLeft = true; // Ahora solo LT o A puede avanzar
+            Debug.Log("Ambos gatillos presionados.");
+        } else {
+            // Movimiento con gatillos
+            if (Input.GetAxis("AtletismTriggerLeft") < 0f && canPressLeft) // Detectar gatillo izquierdo
+            {
+                Debug.Log("Gatillo izquierdo detectado.");
+                MoveForward();
+                canPressLeft = false;
+                canPressRight = true; // Ahora solo RT o D puede avanzar
+            }
+            else if (Input.GetAxis("AtletismTriggerRight") < 0f && canPressRight) // Detectar gatillo derecho
+            {
+                Debug.Log("Gatillo derecho detectado.");
+                MoveForward();
+                canPressRight = false;
+                canPressLeft = true; // Ahora solo LT o A puede avanzar
+            }
         }
     }
 
@@ -58,6 +72,7 @@ public class AtletismoController : MonoBehaviour
         {
             Debug.Log("Has llegado al final. Carrera terminada.");
             raceManager.OnAthleticsRacerReachEnd(transform);
+            SceneManager.LoadScene("MapScene");
         }
     }
 }
