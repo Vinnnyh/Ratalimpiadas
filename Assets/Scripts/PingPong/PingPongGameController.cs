@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PingPongGameController : MonoBehaviour
@@ -178,6 +179,7 @@ public class PingPongGameController : MonoBehaviour
     private void EndGame()
     {
         messageText.text = "Juego Completado";
+        SceneManager.LoadScene("MapScene");
         messageText.gameObject.SetActive(true);
         // Aquí puedes agregar la lógica final del juego.
     }

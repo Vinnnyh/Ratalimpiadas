@@ -520,7 +520,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 60
+  m_MaxValue: 30
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1606,7 +1606,7 @@ MonoBehaviour:
   m_text: Inserte texto
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
-  m_sharedMaterial: {fileID: -6536973832372438565, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
+  m_sharedMaterial: {fileID: -5344738722012394380, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1786,7 +1786,7 @@ MonoBehaviour:
   m_text: 'Nivel:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
-  m_sharedMaterial: {fileID: -6536973832372438565, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
+  m_sharedMaterial: {fileID: -5344738722012394380, guid: 5e86ac6388375944d9fdcceb4ab9533d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
