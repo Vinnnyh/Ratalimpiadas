@@ -111,7 +111,7 @@ public class Player_Movement : MonoBehaviour
             Vector3 hitDirection = (ballPredictionMarker.transform.position - transform.position).normalized;
 
             // Ajustar la fuerza de disparo con altura ajustable
-            float shotHeight = 4.0f;
+            float shotHeight = 3.0f;
             ball.GetComponent<Rigidbody>().velocity = hitDirection * finalForce + new Vector3(0, shotHeight, 0);
         }
     }
