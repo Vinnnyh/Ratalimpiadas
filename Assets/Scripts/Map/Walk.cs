@@ -28,8 +28,8 @@ public class Walk : MonoBehaviour
     void Update()
     {
         // Capturar los ejes de movimiento (joystick o teclas) en cada frame
-        movimientoHorizontal = Input.GetAxis("Horizontal");
-        movimientoVertical = Input.GetAxis("Vertical");
+        movimientoHorizontal = Input.GetAxis("HorizontalMap");
+        movimientoVertical = Input.GetAxis("VerticalMap");
 
         // Capturar input del teclado
         if (Input.GetKey(KeyCode.A)) movimientoHorizontal = -1;
@@ -63,15 +63,15 @@ public class Walk : MonoBehaviour
         // Si no hay movimiento horizontal, considerar el vertical
         else if (Mathf.Abs(movimientoVertical) >= 0.2f)
         {
-            if (movimientoVertical > 0)
+            if (movimientoVertical < 0)
             {
                 movimiento = movimientoAtras;
-                cambiarAnimacion(STATE_FRONT, WALK_FRONT);
+                cambiarAnimacion(STATE_BACK, WALK_BACK);
             }
             else
             {
                 movimiento = movimientoDelante;
-                cambiarAnimacion(STATE_BACK, WALK_BACK);
+                cambiarAnimacion(STATE_FRONT, WALK_FRONT);
             }
             isMoving = true;
         }

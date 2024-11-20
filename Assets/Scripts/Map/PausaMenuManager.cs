@@ -12,6 +12,7 @@ public class PausaMenuManager : MonoBehaviour
     public GameObject menuPausaUI; // El Canvas que contiene todo el menú de pausa
     public Button btn_salir; // El botón que deseas mostrar u ocultar
     GameObject personaje; // Referencia al objeto que contiene el script Walk
+    public GameObject buttonToSelect; // El botón que deseas mantener seleccionado
     private Walk walk; // Referencia al script Walk
     private bool isPaused = false; // Variable para controlar el estado de pausa
 
@@ -31,7 +32,11 @@ public class PausaMenuManager : MonoBehaviour
 
     void Start()
     {
-        
+        // Asegúrate de que el botón seleccionado esté en el inicio
+        if (buttonToSelect != null)
+        {
+            EventSystem.current.SetSelectedGameObject(buttonToSelect);
+        }
     }
 
     void OnEnable()
@@ -59,7 +64,7 @@ public class PausaMenuManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Pause"))
+        if (Input.GetButtonDown("PauseMap"))
         {
             if (isPaused)
             {
@@ -75,6 +80,12 @@ public class PausaMenuManager : MonoBehaviour
         if (isPaused)
         {
             return; // Salir del método Update para prevenir más entradas
+        }
+
+        // Asegúrate de que el botón seleccionado esté siempre seleccionado
+        if (buttonToSelect != null && EventSystem.current.currentSelectedGameObject != buttonToSelect)
+        {
+            EventSystem.current.SetSelectedGameObject(buttonToSelect);
         }
     }
 

@@ -104,7 +104,7 @@ public class Halterofilia : MonoBehaviour
             }
 
             // Verificar si se presiona la tecla Espacio
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("AHalterofilia"))
             {
                 keyPressCount++;
                 remainingTime++;

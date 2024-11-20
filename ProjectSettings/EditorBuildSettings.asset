@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PingPongScene.unity
     guid: f8ad8d114c395324e9249ba421fb1c16
+  - enabled: 1
+    path: Assets/Scenes/AtletismoScene.unity
+    guid: 205b924b8b5b6134b8a0c22ca02a1c85
   m_configObjects: {}
