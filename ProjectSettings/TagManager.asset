@@ -18,6 +18,7 @@ TagManager:
   - BotTable
   - End
   - Start
+  - Bot
   layers:
   - Default
   - TransparentFX

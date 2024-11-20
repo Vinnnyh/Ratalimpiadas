@@ -3,8 +3,8 @@ using UnityEngine;
 public class BotSwimming : MonoBehaviour
 {
     private float speed; // Velocidad actual del bot
-    private float minSpeed = 0f; // Velocidad mínima
-    private float maxSpeed = 0.45f; // Velocidad máxima
+    private float minSpeed = 0.1f; // Velocidad mínima
+    private float maxSpeed = 0.7f; // Velocidad máxima
     private float changeInterval = 1f; // Intervalo de tiempo en segundos para cambiar la velocidad
     private float nextChangeTime = 0f; // Tiempo para el próximo cambio de velocidad
     private Vector3 moveDirection = Vector3.forward; // Dirección de movimiento inicial
