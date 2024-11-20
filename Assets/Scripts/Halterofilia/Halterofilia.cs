@@ -5,6 +5,7 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Halterofilia : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Halterofilia : MonoBehaviour
     public TextMeshProUGUI txtEstado;
     private Double remainingTime = 0;
     private bool isPlaying = true;
-    private float TimeLimit = 60f;
+    private float TimeLimit = 30f;
     private float tiempo = 3f;
 
     private int level1 = 1;
@@ -29,6 +30,7 @@ public class Halterofilia : MonoBehaviour
 
     void Update()
     {
+        
         controlMensajesPulsaciones();
         controlNiveles();
         controlBar();
@@ -61,13 +63,14 @@ public class Halterofilia : MonoBehaviour
                 level++;
                 level2 = level;
                 remainingTime = 0;
-                TimeLimit = 60;
+                TimeLimit = 30;
                 loadBarraTiempo.value = TimeLimit;
             }
         }
         else if (Mathf.Ceil((float)TimeLimit) == 0)
         {
             txtEstado.text = "Perdiste!";
+            SceneManager.LoadScene("MapScene");
         }
 
         if (level1 != level2)
@@ -119,7 +122,7 @@ public class Halterofilia : MonoBehaviour
         switch (level)
         {
             case 1:
-                difficulty = 3;
+                difficulty = 4;
                 levelText.text = "Nivel: " + level;
                 txtEstado.text = "Round " + level;
                 break;
@@ -136,6 +139,7 @@ public class Halterofilia : MonoBehaviour
             case 4:
                 levelText.text = "Ganaste!";
                 txtEstado.text = "GANASTE!";
+                SceneManager.LoadScene("MapScene");
                 break;
         }
 

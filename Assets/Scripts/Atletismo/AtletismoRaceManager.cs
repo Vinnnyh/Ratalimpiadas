@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AtletismoRaceManager : MonoBehaviour
 {
@@ -27,18 +28,22 @@ public class AtletismoRaceManager : MonoBehaviour
                     case 1:
                         athleticsPlayerMedal = "Gold";
                         Debug.Log("Player won the Gold Medal!");
+                        SceneManager.LoadScene("MapScene");
                         break;
                     case 2:
                         athleticsPlayerMedal = "Silver";
                         Debug.Log("Player won the Silver Medal!");
+                        SceneManager.LoadScene("MapScene");
                         break;
                     case 3:
                         athleticsPlayerMedal = "Bronze";
                         Debug.Log("Player won the Bronze Medal!");
+                        SceneManager.LoadScene("MapScene");
                         break;
                     default:
                         athleticsPlayerMedal = "No Medal";
                         Debug.Log("Player did not win a medal.");
+                        SceneManager.LoadScene("MapScene");
                         break;
                 }
             }

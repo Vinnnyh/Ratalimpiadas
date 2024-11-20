@@ -64,8 +64,10 @@ public class PausaMenuManager : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetButtonDown("PauseMap"))
         {
+            Debug.Log("Button pause pressed");
             if (isPaused)
             {
                 Reanudar();

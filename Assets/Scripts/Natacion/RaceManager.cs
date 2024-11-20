@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RaceManager : MonoBehaviour
 {
@@ -35,21 +36,25 @@ public class RaceManager : MonoBehaviour
             {
                 swimmingPlayerMedal = "Gold";
                 Debug.Log("You won a Gold Medal!");
+                SceneManager.LoadScene("MapScene");
             }
             else if (place == 1)
             {
                 swimmingPlayerMedal = "Silver";
                 Debug.Log("You won a Silver Medal!");
+                SceneManager.LoadScene("MapScene");
             }
             else if (place == 2)
             {
                 swimmingPlayerMedal = "Bronze";
                 Debug.Log("You won a Bronze Medal!");
+                SceneManager.LoadScene("MapScene");
             }
             else
             {
                 swimmingPlayerMedal = "No Medal";
                 Debug.Log("You did not win any medal.");
+                SceneManager.LoadScene("MapScene");
             }
 
             // Remove the racer from the list after they reach Start
