@@ -35,7 +35,7 @@ public class SwimmingController : MonoBehaviour
         }
 
         // Alternativa para los joysticks
-        if ((Input.GetAxis("AtletismTriggerLeft") < 0f && canPressW) && (Input.GetAxis("AtletismTriggerRight") < 0f && canPressS)) {
+        if (Input.GetAxis("AtletismTriggerLeft") < 0f && Input.GetAxis("AtletismTriggerRight") < 0f ) {
 
         } else {
             if (Input.GetAxis("AtletismTriggerLeft") < 0f && canPressW)
