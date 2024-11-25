@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: d9ecd45c46148794aa0fcd04c646ccb1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 898.6666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.44617605, y: 0.7299896}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc535d1cbb1b7034290180075d7f4e29
+      internalID: -1792521577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_1
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 899
+        width: 384
+        height: 449
+      alignment: 9
+      pivot: {x: 0.30607018, y: 0.7590523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5525778bfb0dd48ac68d181d72b818
+      internalID: -236091282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 898.6666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.17172591, y: 0.8150714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a6a4a19e5728046971314ad01c1f7a
+      internalID: 1725630737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 898.6666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.14364052, y: 0.82234025}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63477733073d984fb2a1f693a1972fe
+      internalID: 506549257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_4
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 899
+        width: 384
+        height: 449
+      alignment: 9
+      pivot: {x: 0.052865345, y: 0.88151217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb213a8665bd8b429bcb57dae46c29f
+      internalID: 337833898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_5
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 899
+        width: 384
+        height: 449
+      alignment: 9
+      pivot: {x: 0.1288627, y: 0.87395114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce2b91d4b398e742be955963ed7fc16
+      internalID: 1400134480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_6
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 898.6666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.21885045, y: 0.90491074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9597b42f6402dec478c7872edda26752
+      internalID: -1911334851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_7
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 898.6666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.3616015, y: 0.91312224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930b22a9465226141bc3a04bbcd143af
+      internalID: 1296828103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 898.6666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.25072542, y: 0.8961809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62764e733fb9b7b41b2f19a4613e42d3
+      internalID: 1335180478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_9
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 899
+        width: 384
+        height: 449
+      alignment: 9
+      pivot: {x: 0.2190501, y: 0.8672345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5eb311eda075a4ba6962b0d5a648c6
+      internalID: -918163560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449.66666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.39501658, y: 1.0251939}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa86dd7456cdb24a887f8b60444c3aa
+      internalID: 2043055816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 449.66666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.34476265, y: 1.0190209}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d17fdb153f5b6146a8d8a7dc3ae9bfd
+      internalID: 1494321462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_12
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 450
+        width: 384
+        height: 449
+      alignment: 9
+      pivot: {x: 0.19227345, y: 0.9941413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b49e5fee1fb0194c900da2d88e1d178
+      internalID: -1302250108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_13
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 449.66666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.14236037, y: 0.95441383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd71db520db146445b95bab7b3b0d1ce
+      internalID: 1147587742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 449.66666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.050578117, y: 1.1161798}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a0013cb72d8294c9720d19cbea9273
+      internalID: -1872978945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_15
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 449
+        width: 384
+        height: 449
+      alignment: 9
+      pivot: {x: 0.105792366, y: 1.1876364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16eec08609d06ab48ae0e5cbcef3c78d
+      internalID: 1899809617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_16
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 449.66666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.2451191, y: 1.1615855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee8cd22a40f9624194c08efc57ccbd5
+      internalID: 1798526888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_17
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 449.66666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.1995697, y: 1.1452807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d54c3a93dbb24458d11f75bd1ec06b
+      internalID: 758051487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_18
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 449.66666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: -0.041375477, y: 1.2107953}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e393c04e7e47f554aa4f070053e39b75
+      internalID: -56415218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_19
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 449.66666
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: -0.13087273, y: 1.1846993}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6330c3d546d4c04b95804f4ab143b87
+      internalID: 1647103393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPITES_MEDALLA1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.6666565
+        width: 384
+        height: 449.33334
+      alignment: 9
+      pivot: {x: 0.11692793, y: 1.3207873}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52480d6b1d95c74a9384ae156bd05fe
+      internalID: -331622477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SPITES_MEDALLA1_0: -1792521577
+      SPITES_MEDALLA1_1: -236091282
+      SPITES_MEDALLA1_10: 2043055816
+      SPITES_MEDALLA1_11: 1494321462
+      SPITES_MEDALLA1_12: -1302250108
+      SPITES_MEDALLA1_13: 1147587742
+      SPITES_MEDALLA1_14: -1872978945
+      SPITES_MEDALLA1_15: 1899809617
+      SPITES_MEDALLA1_16: 1798526888
+      SPITES_MEDALLA1_17: 758051487
+      SPITES_MEDALLA1_18: -56415218
+      SPITES_MEDALLA1_19: 1647103393
+      SPITES_MEDALLA1_2: 1725630737
+      SPITES_MEDALLA1_20: -331622477
+      SPITES_MEDALLA1_3: 506549257
+      SPITES_MEDALLA1_4: 337833898
+      SPITES_MEDALLA1_5: 1400134480
+      SPITES_MEDALLA1_6: -1911334851
+      SPITES_MEDALLA1_7: 1296828103
+      SPITES_MEDALLA1_8: 1335180478
+      SPITES_MEDALLA1_9: -918163560
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

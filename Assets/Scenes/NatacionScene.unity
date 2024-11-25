@@ -4089,7 +4089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f04516153c7fef48bbdcf40b5895645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swimSpeed: 25
+  swimSpeed: 3
   raceManager: {fileID: 363756479}
 --- !u!136 &1935457092
 CapsuleCollider:
