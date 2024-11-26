@@ -12,6 +12,7 @@ public class IdleMedallas : MonoBehaviour
     private Vector3 posicionOro = new Vector3(0.39f, 0.15f, 2.9f);
     private Vector3 posicionPlata = new Vector3(-5.05f, -0.88f, 2.9f);
     private Vector3 posicionBronce = new Vector3(5.87f, -2.09f, 2.9f);
+    private Vector3 posicionNoGana = new Vector3(9.4f, -3.78, 2.9);
 
     // Puedes agregar un valor para las transiciones de medallas
     private int CounterMedals;
@@ -58,7 +59,7 @@ public class IdleMedallas : MonoBehaviour
                 break;
             default:
                 // Si no hay un puntaje válido, colocar en una posición por defecto
-                PJ.transform.position = new Vector3(0, 0, 0); // Ejemplo de posición por defecto
+                PJ.transform.position = posicionNoGana; // Ejemplo de posición por defecto
                 break;
         }
     }

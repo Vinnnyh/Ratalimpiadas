@@ -5,18 +5,23 @@ using UnityEngine;
 public class RecuperarMedallas : MonoBehaviour
 {
     private int valueDefault = 4;
-    private int playerScore;
+    private int playerScoreHalterofilia;
+    private int playerScorePingPong;
+    private int playerScoreAtletismo;
+    private int playerScoreNatacion;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerScore = PlayerPrefs.GetInt("MedallaHalterofilia", valueDefault);
-        
+        playerScoreHalterofilia = PlayerPrefs.GetInt("MedallaHalterofilia", valueDefault);
+        playerScorePingPong = PlayerPrefs.GetInt("MedallaPingPong", valueDefault);
+        playerScoreAtletismo = PlayerPrefs.GetInt("MedallaAtletismo", valueDefault);
+        playerScoreNatacion = PlayerPrefs.GetInt("MedallaNatacion", valueDefault);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(playerScore);
+        //Debug.Log(playerScore);
     }
 }
