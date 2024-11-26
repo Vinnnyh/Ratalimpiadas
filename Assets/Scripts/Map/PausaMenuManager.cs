@@ -123,14 +123,38 @@ public class PausaMenuManager : MonoBehaviour
         }
     }
 
+    public void MenuMedallas()
+    {
+        SceneManager.LoadScene("MenuMedallasScene");
+        GuardarPosicionObjeto();
+        Reanudar();
+    }
+
     public void MenuPrincipal()
     {
         SceneManager.LoadScene("MainMenuScene");
+        Reanudar();
+        Destroy(gameObject);
     }
 
     public void Salir()
     {
         SceneManager.LoadScene("MapScene");
         Reanudar();
+    }
+
+    // Método para guardar la posición del objeto
+    void GuardarPosicionObjeto()
+    {
+        Vector3 posicion = personaje.transform.position;
+
+        // Guardar cada componente de la posición por separado
+        PlayerPrefs.SetFloat("PosicionX", posicion.x);
+        PlayerPrefs.SetFloat("PosicionY", posicion.y);
+        PlayerPrefs.SetFloat("PosicionZ", posicion.z);
+
+        // Confirmar que se guardó correctamente
+        PlayerPrefs.Save();
+        Debug.Log("Posición guardada: " + posicion);
     }
 }

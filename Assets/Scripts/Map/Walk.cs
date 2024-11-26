@@ -10,8 +10,11 @@ public class Walk : MonoBehaviour
     public Vector3 movimientoAtras = new Vector3(0f, 0f, 1f);
     public Vector3 movimientoDer = new Vector3(1f, 0f, 0f);
     public Vector3 movimientoIzq = new Vector3(-1f, 0f, 0f);
+    public Vector3 posicionInicial = new Vector3(0f, 0.7f, 0f);
 
     private string currentState; // Estado actual del Animator
+
+    public GameObject PJ;
 
     const string STATE_FRONT = "State Front";
     const string STATE_BACK = "State Back";
@@ -24,6 +27,11 @@ public class Walk : MonoBehaviour
 
     float movimientoHorizontal;
     float movimientoVertical;
+
+    void Start()
+    {
+        CargarPosicionObjeto();
+    }
 
     void Update()
     {
@@ -99,6 +107,34 @@ public class Walk : MonoBehaviour
 
             // Actualizar el estado actual
             currentState = nuevoEstado;
+        }
+    }
+
+    // Método para cargar la posición guardada
+    void CargarPosicionObjeto()
+    {
+        // Verificar si las posiciones existen en PlayerPrefs
+        if (PlayerPrefs.HasKey("PosicionX") && PlayerPrefs.HasKey("PosicionY") && PlayerPrefs.HasKey("PosicionZ"))
+        {
+            // Recuperar cada componente de la posición
+            float x = PlayerPrefs.GetFloat("PosicionX");
+            float y = PlayerPrefs.GetFloat("PosicionY");
+            float z = PlayerPrefs.GetFloat("PosicionZ");
+
+            // Crear el nuevo Vector3 con las coordenadas recuperadas
+            Vector3 posicion = new Vector3(x, y, z);
+
+            // Asignar la posición al objeto
+            PJ.transform.position = posicion;
+
+            // Confirmar que se cargó correctamente
+            Debug.Log("Posición cargada: " + posicion);
+        }
+        else
+        {
+            // Si no existe la posición guardada, asignar una posición por defecto
+            Debug.Log("No se encontró una posición guardada. Asignando posición por defecto.");
+            PJ.transform.position = posicionInicial;
         }
     }
 }
