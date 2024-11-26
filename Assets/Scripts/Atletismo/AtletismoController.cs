@@ -1,78 +1,81 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class AtletismoController : MonoBehaviour
 {
-    public float runSpeed = 10f; // Velocidad al correr
-    private bool canPressLeft = true; // Controla si se puede usar el gatillo izquierdo o la tecla A
-    private bool canPressRight = false; // Controla si se puede usar el gatillo derecho o la tecla D
-    public AtletismoRaceManager raceManager;
+    public float runSpeed = 5f; // Velocidad horizontal del jugador
+    public float gravityScale = 1f; // Escala de gravedad personalizada
+
+    private Rigidbody rb;
+    private bool isGravityInverted = false; // Estado de la gravedad
+    private KeyCode gravityToggleKey = KeyCode.Space; // Tecla para alternar la gravedad
+    private bool isGameEnded = false; // Controla si el juego ha terminado
+
+    public AtletismoRaceManager raceManager; // Referencia al RaceManager
+
+    public GameObject visualObject; // Objeto visual del sprite
 
     void Start()
     {
-        raceManager.RegisterAthleticsRacer(transform);
+        rb = GetComponent<Rigidbody>();
+        rb.useGravity = false; // Desactivamos la gravedad global predeterminada
+    }
+
+    void FixedUpdate()
+    {
+        if (isGameEnded) return; // Evitar actualizaciones si el juego ha terminado
+
+        // Movimiento horizontal continuo
+        transform.Translate(Vector3.right * runSpeed * Time.fixedDeltaTime);
+
+        // Aplicar gravedad personalizada
+        Vector3 customGravity = (isGravityInverted ? Vector3.up : Vector3.down) * Physics.gravity.magnitude * gravityScale;
+        rb.AddForce(customGravity, ForceMode.Acceleration);
     }
 
     void Update()
     {
-        // Depurar los valores de los gatillos
-        Debug.Log("AtletismTriggerLeft: " + Input.GetAxis("AtletismTriggerLeft"));
-        Debug.Log("AtletismTriggerRight: " + Input.GetAxis("AtletismTriggerRight"));
+        if (isGameEnded) return; // Evitar actualizaciones si el juego ha terminado
 
-        // Movimiento con teclado
-        if (Input.GetKeyDown(KeyCode.A) && canPressLeft) // Detectar la tecla A
+        // Detectar si se presiona la tecla para invertir la gravedad
+        if (Input.GetKeyDown(gravityToggleKey) || Input.GetButtonDown("gravitychange"))
         {
-            MoveForward();
-            canPressLeft = false;
-            canPressRight = true; // Ahora solo D o RT puede avanzar
+            ToggleGravity();
         }
-        else if (Input.GetKeyDown(KeyCode.D) && canPressRight) // Detectar la tecla D
-        {
-            MoveForward();
-            canPressRight = false;
-            canPressLeft = true; // Ahora solo A o LT puede avanzar
-        }
-
-        
-
-        if (Input.GetAxis("AtletismTriggerLeft") < 0f && Input.GetAxis("AtletismTriggerRight") < 0f )
-        {
-            Debug.Log("Ambos gatillos presionados.");
-        } else {
-            // Movimiento con gatillos
-            if (Input.GetAxis("AtletismTriggerLeft") < 0f && canPressLeft) // Detectar gatillo izquierdo
-            {
-                Debug.Log("Gatillo izquierdo detectado.");
-                MoveForward();
-                canPressLeft = false;
-                canPressRight = true; // Ahora solo RT o D puede avanzar
-            }
-            else if (Input.GetAxis("AtletismTriggerRight") < 0f && canPressRight) // Detectar gatillo derecho
-            {
-                Debug.Log("Gatillo derecho detectado.");
-                MoveForward();
-                canPressRight = false;
-                canPressLeft = true; // Ahora solo LT o A puede avanzar
-            }
-        }
-    }
-
-    private void MoveForward()
-    {
-        // Mueve al jugador hacia adelante en el eje X
-        transform.Translate(Vector3.right * runSpeed * Time.deltaTime);
-        Debug.Log("Corriendo. canPressLeft = " + canPressLeft + ", canPressRight = " + canPressRight);
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (isGameEnded) return; // Evitar acciones si el juego ya terminó
+
         if (other.CompareTag("End"))
         {
-            Debug.Log("Has llegado al final. Carrera terminada.");
+            Debug.Log("Jugador alcanzó el final.");
+            isGameEnded = true; // Marcar el juego como terminado
             raceManager.OnAthleticsRacerReachEnd(transform);
-            SceneManager.LoadScene("MapScene");
         }
+        else if (other.CompareTag("Void"))
+        {
+            Debug.Log("El jugador cayó en un agujero. Reiniciando el juego...");
+            ResetGame();
+        }
+    }
+
+    private void ToggleGravity()
+    {
+        isGravityInverted = !isGravityInverted;
+
+        // Cambiar solo el objeto visual para reflejar el cambio de gravedad
+        if (visualObject != null)
+        {
+            Vector3 newScale = visualObject.transform.localScale;
+            newScale.y = isGravityInverted ? -Mathf.Abs(newScale.y) : Mathf.Abs(newScale.y);
+            visualObject.transform.localScale = newScale;
+        }
+    }
+
+    private void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

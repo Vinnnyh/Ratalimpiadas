@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 8452a1e53484b3d4db3ea614512bd8a4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_0
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 743
+        width: 188
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5898038, y: 0.3870695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e6ba24c268d614c92aa9f8bb52378b
+      internalID: 837789001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_1
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 742
+        width: 200
+        height: 124
+      alignment: 9
+      pivot: {x: 0.59740293, y: 0.3847922}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca250ee5866514342b583c3d46f517a8
+      internalID: -1073279334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_2
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 743
+        width: 210
+        height: 106
+      alignment: 9
+      pivot: {x: 0.56184286, y: 0.42648834}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437c9265b86ef0645adb3e4aa5ae9a78
+      internalID: 1746936532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_3
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 740
+        width: 214
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5364123, y: 0.4505255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2aed0beed2094244b495a1e24e168f7
+      internalID: -1104703093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_4
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 744
+        width: 214
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5121374, y: 0.46698204}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336e2fbc09d4480439cce034c71257e6
+      internalID: 1255898708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_5
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 747
+        width: 198
+        height: 106
+      alignment: 9
+      pivot: {x: 0.5131176, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc649639bcb14cc43a876ce3c5856d67
+      internalID: 1383379831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_6
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 148
+        width: 212
+        height: 105
+      alignment: 9
+      pivot: {x: 0.56125945, y: 0.41342017}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39442798e73f49240ab678bd6a45e197
+      internalID: -1287690761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_7
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 132
+        width: 216
+        height: 105
+      alignment: 9
+      pivot: {x: 0.54810023, y: 0.41342002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8893a26dd2bc081448b109f52b20aeae
+      internalID: 388544371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_8
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 135
+        width: 213
+        height: 117
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.44449973}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88f0777ff8d2624fa7ee36015d7b27a
+      internalID: -1094692605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_9
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 136
+        width: 199
+        height: 104
+      alignment: 9
+      pivot: {x: 0.51957846, y: 0.4999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ced617a7605d34ab7ce13babb71e3f
+      internalID: -1129691941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_10
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 138
+        width: 210
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5556582, y: 0.40105227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07be0e55d713f154bba043ebdb48c18d
+      internalID: -1870094441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesotroequipocorriendo1_11
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 126
+        width: 201
+        height: 124
+      alignment: 9
+      pivot: {x: 0.558151, y: 0.36384606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794053a83b8463e44b87127d94086d55
+      internalID: 898863061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spritesotroequipocorriendo1_0: 837789001
+      spritesotroequipocorriendo1_1: -1073279334
+      spritesotroequipocorriendo1_10: -1870094441
+      spritesotroequipocorriendo1_11: 898863061
+      spritesotroequipocorriendo1_2: 1746936532
+      spritesotroequipocorriendo1_3: -1104703093
+      spritesotroequipocorriendo1_4: 1255898708
+      spritesotroequipocorriendo1_5: 1383379831
+      spritesotroequipocorriendo1_6: -1287690761
+      spritesotroequipocorriendo1_7: 388544371
+      spritesotroequipocorriendo1_8: -1094692605
+      spritesotroequipocorriendo1_9: -1129691941
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

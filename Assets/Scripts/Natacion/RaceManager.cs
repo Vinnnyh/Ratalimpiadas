@@ -37,24 +37,28 @@ public class RaceManager : MonoBehaviour
                 swimmingPlayerMedal = "Gold";
                 Debug.Log("You won a Gold Medal!");
                 SceneManager.LoadScene("MapScene");
+                guardarMedalla(3);
             }
             else if (place == 1)
             {
                 swimmingPlayerMedal = "Silver";
                 Debug.Log("You won a Silver Medal!");
                 SceneManager.LoadScene("MapScene");
+                guardarMedalla(2);
             }
             else if (place == 2)
             {
                 swimmingPlayerMedal = "Bronze";
                 Debug.Log("You won a Bronze Medal!");
                 SceneManager.LoadScene("MapScene");
+                guardarMedalla(1);
             }
             else
             {
                 swimmingPlayerMedal = "No Medal";
                 Debug.Log("You did not win any medal.");
                 SceneManager.LoadScene("MapScene");
+                guardarMedalla(0);
             }
 
             // Remove the racer from the list after they reach Start
@@ -64,5 +68,10 @@ public class RaceManager : MonoBehaviour
         {
             Debug.LogWarning($"Racer {racer.name} reached the Start without having reached the End first.");
         }
+    }
+    void guardarMedalla(int numMedalla)
+    {
+        PlayerPrefs.SetInt("MedallaNatacion", numMedalla);
+        PlayerPrefs.Save();
     }
 }

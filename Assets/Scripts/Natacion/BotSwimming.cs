@@ -3,8 +3,8 @@ using UnityEngine;
 public class BotSwimming : MonoBehaviour
 {
     private float speed; // Velocidad actual del bot
-    private float minSpeed = 0.1f; // Velocidad mínima
-    private float maxSpeed = 0.7f; // Velocidad máxima
+    public float minSpeed = 2f; // Velocidad mínima
+    public float maxSpeed = 3f; // Velocidad máxima
     private float changeInterval = 1f; // Intervalo de tiempo en segundos para cambiar la velocidad
     private float nextChangeTime = 0f; // Tiempo para el próximo cambio de velocidad
     private Vector3 moveDirection = Vector3.forward; // Dirección de movimiento inicial
@@ -34,7 +34,7 @@ public class BotSwimming : MonoBehaviour
     {
         if (other.CompareTag("End"))
         {
-            // Notificar al RaceManager que el jugador/bot llegó a End
+            // Notificar al RaceManager que el bot llegó a End
             raceManager.OnRacerReachEnd(transform);
 
             // Cambiar dirección de movimiento
@@ -43,12 +43,11 @@ public class BotSwimming : MonoBehaviour
         }
         else if (other.CompareTag("Start"))
         {
-            // Notificar al RaceManager que el jugador/bot volvió a Start
             raceManager.OnRacerReachStart(transform);
 
-            // Cambiar dirección de movimiento
-            moveDirection = -moveDirection;
-            transform.Rotate(0, 180, 0);
+            // Detener al bot al llegar a Start
+            Debug.Log($"Bot {name} alcanzó Start. Finalizando.");
+            enabled = false; // Detener actualizaciones del bot
         }
     }
 }

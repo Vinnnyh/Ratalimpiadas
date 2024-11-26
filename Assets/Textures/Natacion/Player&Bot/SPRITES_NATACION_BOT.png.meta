@@ -1,0 +1,303 @@
+fileFormatVersion: 2
+guid: d62a264fd4bcba54ab76e41bb96f395d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SPRITES_NATACION_BOT_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 543
+        width: 279
+        height: 535
+      alignment: 9
+      pivot: {x: 0.4953453, y: 0.55825937}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3372c48add97ba04daad3ddc1c82f0ab
+      internalID: -1166418846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_BOT_1
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 550
+        width: 321
+        height: 529
+      alignment: 9
+      pivot: {x: 0.4757251, y: 0.5638303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b959eb55704bf584da243de64dd1cfaa
+      internalID: 672994437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_BOT_2
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 549
+        width: 343
+        height: 529
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5662853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de2e99a7235333478834d89daff01f0
+      internalID: -1272393239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_BOT_3
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 548
+        width: 340
+        height: 527
+      alignment: 9
+      pivot: {x: 0.5229176, y: 0.5616082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fb635b411262845bdd4225f273a3f1
+      internalID: -1691628094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_BOT_4
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 291
+        height: 528
+      alignment: 9
+      pivot: {x: 0.46875975, y: 0.5836284}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d9a9c96ea53fd419f2410c1b318d55
+      internalID: -1068075106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_BOT_5
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 2
+        width: 335
+        height: 526
+      alignment: 9
+      pivot: {x: 0.5232604, y: 0.5790085}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4f64488cdbf8e4ea6a811e5cc10d98
+      internalID: 591036649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_BOT_6
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 3
+        width: 335
+        height: 527
+      alignment: 9
+      pivot: {x: 0.49224618, y: 0.5887158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8789a5f91429a849870516ec3bb763a
+      internalID: 1313227924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_BOT_7
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2
+        width: 317
+        height: 527
+      alignment: 9
+      pivot: {x: 0.4754192, y: 0.5761354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4326111b2c9064284322d5ee023367
+      internalID: 1134813788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SPRITES_NATACION_BOT_0: -1166418846
+      SPRITES_NATACION_BOT_1: 672994437
+      SPRITES_NATACION_BOT_2: -1272393239
+      SPRITES_NATACION_BOT_3: -1691628094
+      SPRITES_NATACION_BOT_4: -1068075106
+      SPRITES_NATACION_BOT_5: 591036649
+      SPRITES_NATACION_BOT_6: 1313227924
+      SPRITES_NATACION_BOT_7: 1134813788
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

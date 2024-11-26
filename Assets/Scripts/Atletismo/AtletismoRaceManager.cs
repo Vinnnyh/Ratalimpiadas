@@ -29,21 +29,25 @@ public class AtletismoRaceManager : MonoBehaviour
                         athleticsPlayerMedal = "Gold";
                         Debug.Log("Player won the Gold Medal!");
                         SceneManager.LoadScene("MapScene");
+                        guardarMedalla(3);
                         break;
                     case 2:
                         athleticsPlayerMedal = "Silver";
                         Debug.Log("Player won the Silver Medal!");
                         SceneManager.LoadScene("MapScene");
+                        guardarMedalla(2);
                         break;
                     case 3:
                         athleticsPlayerMedal = "Bronze";
                         Debug.Log("Player won the Bronze Medal!");
                         SceneManager.LoadScene("MapScene");
+                        guardarMedalla(1);
                         break;
                     default:
                         athleticsPlayerMedal = "No Medal";
                         Debug.Log("Player did not win a medal.");
                         SceneManager.LoadScene("MapScene");
+                        guardarMedalla(0);
                         break;
                 }
             }
@@ -52,5 +56,10 @@ public class AtletismoRaceManager : MonoBehaviour
         {
             Debug.Log($"Racer {racer.name} has already reached the End.");
         }
+    }
+    void guardarMedalla(int numMedalla)
+    {
+        PlayerPrefs.SetInt("MedallaAtletismo", numMedalla);
+        PlayerPrefs.Save();
     }
 }

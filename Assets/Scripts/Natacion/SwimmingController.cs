@@ -51,7 +51,6 @@ public class SwimmingController : MonoBehaviour
                 canPressW = true; // Ahora solo el joystick izquierdo puede avanzar
             }
         }
-        
     }
 
     private void SwimForward()
@@ -73,12 +72,10 @@ public class SwimmingController : MonoBehaviour
         }
         else if (other.CompareTag("Start"))
         {
-            // Notificar al RaceManager que el jugador/bot volvió a Start
             raceManager.OnRacerReachStart(transform);
 
-            // Cambiar dirección de movimiento
-            moveDirection = -moveDirection;
-            transform.Rotate(0, 180, 0);
+            // Terminar el juego al llegar a Start
+            Debug.Log("Jugador alcanzó Start. Finalizando el juego.");
         }
     }
 }

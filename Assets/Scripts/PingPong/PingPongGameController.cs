@@ -14,7 +14,7 @@ public class PingPongGameController : MonoBehaviour
     public Player_Movement player;
     public Bot bot; 
 
-    private float roundTime = 20f;  // Tiempo por ronda (en segundos)
+    private float roundTime = 25f;  // Tiempo por ronda (en segundos)
     private float currentRoundTime;
     private int currentRound = 1;
     private int totalRounds = 3;  

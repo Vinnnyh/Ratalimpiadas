@@ -1,0 +1,303 @@
+fileFormatVersion: 2
+guid: 575c6994c840ade498781d26a045d6cb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SPRITES_NATACION_CHUCHO_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 543
+        width: 279
+        height: 535
+      alignment: 9
+      pivot: {x: 0.49069032, y: 0.5509771}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7425f7cbd95ccd648bff7969317bfdf5
+      internalID: 124810989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_CHUCHO_1
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 550
+        width: 321
+        height: 529
+      alignment: 9
+      pivot: {x: 0.4757251, y: 0.54664516}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74aadd9b77f33d243b79ae6081f498c4
+      internalID: 1211790619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_CHUCHO_2
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 549
+        width: 343
+        height: 529
+      alignment: 9
+      pivot: {x: 0.5, y: 0.54419017}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f68a6c41ee6b1e48b576f861f737307
+      internalID: -555941676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_CHUCHO_3
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 548
+        width: 340
+        height: 527
+      alignment: 9
+      pivot: {x: 0.5267377, y: 0.54189354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e585f868086e2084389faee811a45e43
+      internalID: 2017581112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_CHUCHO_4
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 291
+        height: 528
+      alignment: 9
+      pivot: {x: 0.47768557, y: 0.55411243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42300a96256c4a94a9f9bca9b06073a5
+      internalID: 1405238351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_CHUCHO_5
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 2
+        width: 335
+        height: 526
+      alignment: 9
+      pivot: {x: 0.527137, y: 0.5592563}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca1b4e765c31a543ad8925a20e98c3f
+      internalID: 756885807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_CHUCHO_6
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 3
+        width: 335
+        height: 527
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5492866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a152deb3d71db4ab596fb4009ed27f
+      internalID: 1399941010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITES_NATACION_CHUCHO_7
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2
+        width: 317
+        height: 527
+      alignment: 9
+      pivot: {x: 0.47951567, y: 0.5490278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66022900a0631974f8557b58871f28a8
+      internalID: -263111065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SPRITES_NATACION_CHUCHO_0: 124810989
+      SPRITES_NATACION_CHUCHO_1: 1211790619
+      SPRITES_NATACION_CHUCHO_2: -555941676
+      SPRITES_NATACION_CHUCHO_3: 2017581112
+      SPRITES_NATACION_CHUCHO_4: 1405238351
+      SPRITES_NATACION_CHUCHO_5: 756885807
+      SPRITES_NATACION_CHUCHO_6: 1399941010
+      SPRITES_NATACION_CHUCHO_7: -263111065
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

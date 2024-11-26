@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class AtletismoCameraController : MonoBehaviour
 {
-    public Transform player; // Referencia al jugador
     public Transform focusPoint; // Objeto vacío para el acercamiento inicial
-    public float smoothSpeed = 0.125f; // Velocidad de suavizado para el seguimiento
     public float moveDuration = 2f; // Duración del movimiento de la cámara hacia el focusPoint
     public float pauseBeforeStart = 0f; // Tiempo antes de iniciar el acercamiento
 
@@ -16,17 +14,17 @@ public class AtletismoCameraController : MonoBehaviour
     {
         mainCamera = Camera.main; // Obtener la cámara principal
 
-        if (focusPoint != null && player != null)
+        if (focusPoint != null)
         {
-            StartCoroutine(ZoomAndFollowEffect());
+            StartCoroutine(ZoomEffect());
         }
         else
         {
-            Debug.LogError("Debes asignar tanto el focusPoint como el player en el inspector.");
+            Debug.LogError("Debes asignar un focusPoint en el inspector.");
         }
     }
 
-    private IEnumerator ZoomAndFollowEffect()
+    private IEnumerator ZoomEffect()
     {
         // Esperar antes de comenzar el acercamiento
         yield return new WaitForSeconds(pauseBeforeStart);
@@ -54,19 +52,6 @@ public class AtletismoCameraController : MonoBehaviour
 
         Debug.Log("Acercamiento inicial completado.");
 
-        // Activar el seguimiento al jugador
-        isFocusing = false;
-    }
-
-    private void LateUpdate()
-    {
-        if (!isFocusing)
-        {
-            // Seguir solo en el eje X, mantener Y y Z fijas
-            Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, transform.position.z);
-
-            // Interpolar suavemente hacia la nueva posición
-            transform.position = Vector3.Lerp(transform.position, targetPosition, smoothSpeed);
-        }
+        isFocusing = false; // Finaliza el proceso de enfoque
     }
 }

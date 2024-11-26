@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Bot : MonoBehaviour
 {
-    public float speed = 10f;
-    public float force = 6f;
-    public float hitHeight = 4f; 
+    public float speed = 8.8f; // Velocidad del bot
+    public float force = 6f; // Fuerza del golpe
+    public float hitHeight = 2f; // Altura del golpe
+    public float airSpeedReduction = 0.8f; // Velocidad mínima en el aire
+    public float slowdownDuration = 1f; // Duración de la ralentización
+
     public Transform ball;
     public Transform aimTarget;
     public Transform[] targets;
@@ -64,7 +67,35 @@ public class Bot : MonoBehaviour
 
             // Calcular la dirección de golpe y aplicar fuerza
             Vector3 dir = PickTarget() - transform.position;
-            other.GetComponent<Rigidbody>().velocity = dir.normalized * force + new Vector3(0, hitHeight, 0); // Usar hitHeight para controlar la altura
+            Rigidbody ballRb = other.GetComponent<Rigidbody>();
+
+            if (ballRb != null)
+            {
+                ballRb.velocity = dir.normalized * force + new Vector3(0, hitHeight, 0); // Usar hitHeight para controlar la altura
+
+                // Reducir la velocidad de la pelota en el aire manteniendo la fuerza
+                StartCoroutine(SlowBallWhileMaintainingTrajectory(ballRb, dir));
+            }
         }
+    }
+
+    private IEnumerator SlowBallWhileMaintainingTrajectory(Rigidbody ballRb, Vector3 targetDirection)
+    {
+        float timeElapsed = 0f;
+        Vector3 initialVelocity = ballRb.velocity;
+
+        while (timeElapsed < slowdownDuration)
+        {
+            timeElapsed += Time.deltaTime;
+
+            // Mantener la dirección pero reducir gradualmente la velocidad
+            float lerpFactor = timeElapsed / slowdownDuration;
+            ballRb.velocity = Vector3.Lerp(initialVelocity, targetDirection.normalized * airSpeedReduction, lerpFactor);
+
+            yield return null;
+        }
+
+        // Asegurar que la pelota mantenga la velocidad mínima después de ralentizarse
+        ballRb.velocity = targetDirection.normalized * airSpeedReduction;
     }
 }

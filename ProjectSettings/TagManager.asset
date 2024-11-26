@@ -19,6 +19,9 @@ TagManager:
   - End
   - Start
   - Bot
+  - Pistas
+  - Void
+  - Waypoint
   layers:
   - Default
   - TransparentFX
@@ -27,7 +30,7 @@ TagManager:
   - Water
   - UI
   - Ball
-  - 
+  - Pista
   - 
   - 
   - 

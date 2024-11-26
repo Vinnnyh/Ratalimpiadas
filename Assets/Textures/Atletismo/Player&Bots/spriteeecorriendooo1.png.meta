@@ -1,0 +1,436 @@
+fileFormatVersion: 2
+guid: 97cde2159a6208b4eb5c3a513498c289
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 839
+        width: 147
+        height: 108
+      alignment: 9
+      pivot: {x: 0.6134733, y: 0.38967782}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0fa2c26246b554bbe1161342af09c6
+      internalID: -1314845998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_1
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 839
+        width: 147
+        height: 108
+      alignment: 9
+      pivot: {x: 0.6377887, y: 0.38967782}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69763210b3f7d554ab1863f0f3583262
+      internalID: -858936800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_2
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 839
+        width: 158
+        height: 97
+      alignment: 9
+      pivot: {x: 0.613114, y: 0.35260072}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32b2857bbc7e1d4696fa07dc1fb0040
+      internalID: 83887392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_3
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 838
+        width: 158
+        height: 97
+      alignment: 9
+      pivot: {x: 0.6206545, y: 0.4017334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74874b1d5dc267a45871ee8772a2aacc
+      internalID: -145826576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_4
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 838
+        width: 166
+        height: 83
+      alignment: 9
+      pivot: {x: 0.55741936, y: 0.39951333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1b5a07dc09c8a448ba87f911286695
+      internalID: 1045142182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_5
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 836
+        width: 168
+        height: 83
+      alignment: 9
+      pivot: {x: 0.5425524, y: 0.44257915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01afd7ab30670b04f99364f199a6658f
+      internalID: -355496943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_6
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 839
+        width: 168
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6414ff301a2d9c840af058d5ad9916ce
+      internalID: -1432869315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_7
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 838
+        width: 156
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033ab82baaccffe46913caa73fbb2514
+      internalID: -682425017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_8
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 535
+        width: 166
+        height: 84
+      alignment: 9
+      pivot: {x: 0.56459767, y: 0.42907786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8cc744b71e3f145b3fdd30b9a3e0b6
+      internalID: 877466572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_9
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 531
+        width: 170
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5700861, y: 0.4418789}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d664fb5bbd3c7a241b61a089284a186c
+      internalID: -1604978595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_10
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 531
+        width: 167
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d7655ced4122245a9b9b6c498068b9
+      internalID: 851747996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_11
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 531
+        width: 156
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3222b5ce331646f4ca1c1dc000e6e93c
+      internalID: 323576488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_12
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 533
+        width: 165
+        height: 83
+      alignment: 9
+      pivot: {x: 0.52888405, y: 0.45693418}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3a9b27b9635f942b717a89fc035ab0
+      internalID: -1222201846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteeecorriendooo1_13
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 534
+        width: 158
+        height: 97
+      alignment: 9
+      pivot: {x: 0.5603275, y: 0.37716708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5f77521d453a343aeab58c50bbd951
+      internalID: 383686760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spriteeecorriendooo1_0: -1314845998
+      spriteeecorriendooo1_1: -858936800
+      spriteeecorriendooo1_10: 851747996
+      spriteeecorriendooo1_11: 323576488
+      spriteeecorriendooo1_12: -1222201846
+      spriteeecorriendooo1_13: 383686760
+      spriteeecorriendooo1_14: 1004013253
+      spriteeecorriendooo1_2: 83887392
+      spriteeecorriendooo1_3: -145826576
+      spriteeecorriendooo1_4: 1045142182
+      spriteeecorriendooo1_5: -355496943
+      spriteeecorriendooo1_6: -1432869315
+      spriteeecorriendooo1_7: -682425017
+      spriteeecorriendooo1_8: 877466572
+      spriteeecorriendooo1_9: -1604978595
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
