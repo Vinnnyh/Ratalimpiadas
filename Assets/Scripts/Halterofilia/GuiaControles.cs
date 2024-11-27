@@ -19,10 +19,9 @@ public class GuiaControles : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("GuiaControl", 1);
+        int YaEjecuto = PlayerPrefs.GetInt("YaEjecuto", 1);
         PlayerPrefs.Save();
-        //guiaControl = PlayerPrefs.GetInt("GuiaControl", 1);
 
-        // Activa todos los canvas de la lista
         GuiaControl.SetActive(true);
         foreach (var canvas in additionalCanvasObjects)
         {
