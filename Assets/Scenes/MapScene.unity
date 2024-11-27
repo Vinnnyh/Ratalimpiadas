@@ -79366,6 +79366,8 @@ MonoBehaviour:
   movimientoIzq: {x: -1, y: 0, z: 0}
   posicionInicial: {x: 0, y: 0.7, z: 0}
   PJ: {fileID: 1384283175}
+  "canvasMenuEnse\xF1anza": {fileID: 497855131}
+  "canvasMenuEnse\xF1anza2": {fileID: 1770444591}
 --- !u!1 &1385942692
 GameObject:
   m_ObjectHideFlags: 0
@@ -100336,6 +100338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770444593}
   - component: {fileID: 1770444594}
+  - component: {fileID: 1770444595}
   m_Layer: 0
   m_Name: ControllerGuia
   m_TagString: Untagged
@@ -100368,6 +100371,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00827fb08f3aa394697f6292fb79d553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: B-S
+  GuiaControl: {fileID: 497855131}
+  guiaControl: 0
+  yaono: 0
+  isPaused: 1
+  additionalCanvasObjects: []
+--- !u!114 &1770444595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770444591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d79eb495682ed429f997a9f18848fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: B-S
@@ -122795,7 +122816,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fc028327f0e9cb0459f728d78af75750, type: 2}
+  - {fileID: 2100000, guid: 930f2640b8200c342b59cd1ac8495275, type: 2}
   - {fileID: -7310513564467493895, guid: ba12fffb6b1cb3b49899539d6eb44d27, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
