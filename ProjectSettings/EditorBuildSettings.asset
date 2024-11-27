@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MedallasScene.unity
     guid: 336dbac972d7b134684c5774c1c60917
+  - enabled: 1
+    path: Assets/Scenes/NatacionScene.unity
+    guid: 5ee8b906a815fe347bc2fb9da44241ab
+  - enabled: 1
+    path: Assets/Scenes/AtletismoScene.unity
+    guid: 205b924b8b5b6134b8a0c22ca02a1c85
   m_configObjects: {}
