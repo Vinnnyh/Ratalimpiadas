@@ -3,17 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class AtletismoController : MonoBehaviour
 {
-    public float runSpeed = 5f; // Velocidad horizontal del jugador
-    public float gravityScale = 1f; // Escala de gravedad personalizada
+    public float runSpeed = 5f; 
+    public float gravityScale = 1f;
 
     private Rigidbody rb;
-    private bool isGravityInverted = false; // Estado de la gravedad
-    private KeyCode gravityToggleKey = KeyCode.Space; // Tecla para alternar la gravedad
-    private bool isGameEnded = false; // Controla si el juego ha terminado
+    private bool isGravityInverted = false; 
+    private KeyCode gravityToggleKey = KeyCode.Space; 
+    private bool isGameEnded = false; 
 
-    public AtletismoRaceManager raceManager; // Referencia al RaceManager
+    public AtletismoRaceManager raceManager;
 
-    public GameObject visualObject; // Objeto visual del sprite
+    public GameObject visualObject;
 
     void Start()
     {
@@ -47,13 +47,13 @@ public class AtletismoController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isGameEnded) return; // Evitar acciones si el juego ya terminó
+        if (isGameEnded) return;
 
         if (other.CompareTag("End"))
         {
             Debug.Log("Jugador alcanzó el final.");
             isGameEnded = true;
-            raceManager.OnAthleticsRacerReachEnd(transform); // Registrar al jugador
+            raceManager.OnAthleticsRacerReachEnd(transform);
         }
         else if (other.CompareTag("Void"))
         {
@@ -77,6 +77,6 @@ public class AtletismoController : MonoBehaviour
 
     private void ResetGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MedallasScene");
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PingPongGameController : MonoBehaviour
-{
+{   
     public int playerScore = 0; 
     public int botScore = 0;     
     public TextMeshProUGUI scoreText; 
@@ -16,7 +16,7 @@ public class PingPongGameController : MonoBehaviour
 
     private int level;
 
-    private float roundTime = 15f;  // Tiempo total del juego (30 segundos)
+    private float roundTime = 30f;  // Tiempo total del juego (30 segundos)
     private float currentRoundTime;
     private bool isPaused = true;
     public Animator introAnimator;  
@@ -159,6 +159,7 @@ public class PingPongGameController : MonoBehaviour
             Debug.Log("You won a Gold Medal!");
             level = 3;
             guardarMedalla(3);
+            SceneManager.LoadScene("MedallasScene");
         }
         else if (botScore > playerScore && (botScore - playerScore) < 2)
         {
@@ -167,6 +168,7 @@ public class PingPongGameController : MonoBehaviour
             Debug.Log("You won a Silver Medal!");
             level = 2;
             guardarMedalla(2);
+            SceneManager.LoadScene("MedallasScene");
         }
         else if (playerScore >= 2)
         {
@@ -175,6 +177,7 @@ public class PingPongGameController : MonoBehaviour
             Debug.Log("You won a Bronze Medal!");
             level = 1;
             guardarMedalla(1);
+            SceneManager.LoadScene("MedallasScene");
         }
         else
         {
@@ -183,17 +186,15 @@ public class PingPongGameController : MonoBehaviour
             Debug.Log("You did not win any medal.");
             level = 0;
             guardarMedalla(0);
+            SceneManager.LoadScene("MedallasScene");
         }
-
-        // Cargar la escena del mapa
-        SceneManager.LoadScene("MedallasScene");
     }
-
-
 
     void guardarMedalla(int numMedalla)
     {
         int playerScore = PlayerPrefs.GetInt("MedallaPingPong", 4);
+
+        Debug.Log(playerScore);
 
         PlayerPrefs.SetInt("MedallaTemporal", numMedalla);
         if (playerScore < level)

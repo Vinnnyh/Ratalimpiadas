@@ -34,11 +34,8 @@ public class AtletismoRaceManager : MonoBehaviour
         // Si es el jugador, asignar medalla
         if (racerTypes[racer])
         {
-            if (!playerFinished) // Solo se ejecuta si el jugador no ha terminado
-            {
-                playerFinished = true;
-                AssignMedal(place);
-            }
+            AssignMedal(place);
+            Debug.Log(place);
         }
     }
 
@@ -50,6 +47,7 @@ public class AtletismoRaceManager : MonoBehaviour
             Debug.Log("You won a Gold Medal!");
             level = 3;
             guardarMedalla(3);
+            SceneManager.LoadScene("MedallasScene");
         }
         else if (place == 1)
         {
@@ -57,6 +55,7 @@ public class AtletismoRaceManager : MonoBehaviour
             Debug.Log("You won a Silver Medal!");
             level = 2;
             guardarMedalla(2);
+            SceneManager.LoadScene("MedallasScene");
         }
         else if (place == 2)
         {
@@ -64,6 +63,7 @@ public class AtletismoRaceManager : MonoBehaviour
             Debug.Log("You won a Bronze Medal!");
             level = 1;
             guardarMedalla(1);
+            SceneManager.LoadScene("MedallasScene");
         }
         else
         {
@@ -71,18 +71,18 @@ public class AtletismoRaceManager : MonoBehaviour
             Debug.Log("You did not win any medal.");
             level = 0;
             guardarMedalla(0);
+            SceneManager.LoadScene("MedallasScene");
         }
-
-        SceneManager.LoadScene("MedallasScene");
     }
 
     void guardarMedalla(int numMedalla)
     {
         int previousMedal = PlayerPrefs.GetInt("MedallaAtletismo", 4);
-
+        Debug.Log(previousMedal);
         PlayerPrefs.SetInt("MedallaTemporal", numMedalla);
-        if (previousMedal < level)
-        {
+        if (previousMedal > level)
+        {   
+            Debug.Log("Llegamos al if uwu");
             PlayerPrefs.SetInt("MedallaAtletismo", numMedalla);
         }
         PlayerPrefs.Save();

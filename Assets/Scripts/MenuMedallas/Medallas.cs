@@ -47,7 +47,7 @@ public class Medallas : MonoBehaviour
         MostrarMedalla(MedallaNatacion, ScoreNatacion);
     }
 
-    // Método para mostrar la medalla según el valor
+    // Mï¿½todo para mostrar la medalla segï¿½n el valor
     void MostrarMedalla(SpriteRenderer medallaRenderer, int medalla)
     {
         switch (medalla)
