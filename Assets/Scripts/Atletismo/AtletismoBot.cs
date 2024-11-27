@@ -10,6 +10,7 @@ public class AtletismoBot : MonoBehaviour
     private Rigidbody rb;
     private bool isGravityInverted = false; // Estado de la gravedad actual
     public GameObject visualObject; // Objeto visual del sprite
+    public AtletismoRaceManager raceManager; // Referencia al RaceManager
 
     void Start()
     {
@@ -21,6 +22,9 @@ public class AtletismoBot : MonoBehaviour
 
         // Configura la gravedad inicial
         ApplyGravity();
+
+        // Registrar el bot en el RaceManager
+        raceManager.RegisterRacer(transform, false); // false indica que es un bot
     }
 
     void FixedUpdate()
@@ -44,6 +48,7 @@ public class AtletismoBot : MonoBehaviour
         {
             Debug.Log("Bot alcanzó el final.");
             // Notificar al RaceManager que el bot llegó al final
+            raceManager.OnAthleticsRacerReachEnd(transform);
         }
     }
 

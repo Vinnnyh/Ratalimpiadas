@@ -4,62 +4,87 @@ using UnityEngine.SceneManagement;
 
 public class AtletismoRaceManager : MonoBehaviour
 {
-    private List<Transform> racersReachedEnd = new List<Transform>();
-    public static string athleticsPlayerMedal = "No Medal";
+    private List<Transform> racersReachedEnd = new List<Transform>(); // Lista de todos los corredores que llegaron a "End"
+    private Dictionary<Transform, bool> racerTypes = new Dictionary<Transform, bool>(); // Identificar si es jugador o bot
 
-    public void RegisterAthleticsRacer(Transform racer)
+    public static string athleticsPlayerMedal = "No Medal";
+    private int level;
+    private bool playerFinished = false; // Verifica si el jugador ya terminó
+
+    public void RegisterRacer(Transform racer, bool isPlayer)
     {
-        Debug.Log($"Racer {racer.name} registered for athletics.");
+        racerTypes[racer] = isPlayer; // Registrar si es jugador o bot
+        Debug.Log($"Racer {racer.name} registered. IsPlayer: {isPlayer}");
     }
 
     public void OnAthleticsRacerReachEnd(Transform racer)
     {
-        if (!racersReachedEnd.Contains(racer))
+        // Verificar si el corredor ya está registrado y si ya llegó
+        if (!racerTypes.ContainsKey(racer) || racersReachedEnd.Contains(racer))
         {
-            racersReachedEnd.Add(racer);
-            Debug.Log($"Racer {racer.name} reached the End. Position in list: {racersReachedEnd.Count}");
+            Debug.LogWarning($"Racer {racer.name} is not registered or has already reached the End.");
+            return;
+        }
 
-            // Asignar medallas
-            int position = racersReachedEnd.Count;
-            if (racer.CompareTag("Player"))
+        // Agregar el corredor a la lista de finalización
+        racersReachedEnd.Add(racer);
+        int place = racersReachedEnd.Count - 1; // Posición basada en la lista
+        Debug.Log($"{racer.name} reached the End. Position: {place}");
+
+        // Si es el jugador, asignar medalla
+        if (racerTypes[racer])
+        {
+            if (!playerFinished) // Solo se ejecuta si el jugador no ha terminado
             {
-                switch (position)
-                {
-                    case 1:
-                        athleticsPlayerMedal = "Gold";
-                        Debug.Log("Player won the Gold Medal!");
-                        SceneManager.LoadScene("MapScene");
-                        guardarMedalla(3);
-                        break;
-                    case 2:
-                        athleticsPlayerMedal = "Silver";
-                        Debug.Log("Player won the Silver Medal!");
-                        SceneManager.LoadScene("MapScene");
-                        guardarMedalla(2);
-                        break;
-                    case 3:
-                        athleticsPlayerMedal = "Bronze";
-                        Debug.Log("Player won the Bronze Medal!");
-                        SceneManager.LoadScene("MapScene");
-                        guardarMedalla(1);
-                        break;
-                    default:
-                        athleticsPlayerMedal = "No Medal";
-                        Debug.Log("Player did not win a medal.");
-                        SceneManager.LoadScene("MapScene");
-                        guardarMedalla(0);
-                        break;
-                }
+                playerFinished = true;
+                AssignMedal(place);
             }
+        }
+    }
+
+    private void AssignMedal(int place)
+    {
+        if (place == 0)
+        {
+            athleticsPlayerMedal = "Gold";
+            Debug.Log("You won a Gold Medal!");
+            level = 3;
+            guardarMedalla(3);
+        }
+        else if (place == 1)
+        {
+            athleticsPlayerMedal = "Silver";
+            Debug.Log("You won a Silver Medal!");
+            level = 2;
+            guardarMedalla(2);
+        }
+        else if (place == 2)
+        {
+            athleticsPlayerMedal = "Bronze";
+            Debug.Log("You won a Bronze Medal!");
+            level = 1;
+            guardarMedalla(1);
         }
         else
         {
-            Debug.Log($"Racer {racer.name} has already reached the End.");
+            athleticsPlayerMedal = "No Medal";
+            Debug.Log("You did not win any medal.");
+            level = 0;
+            guardarMedalla(0);
         }
+
+        SceneManager.LoadScene("MedallasScene");
     }
+
     void guardarMedalla(int numMedalla)
     {
-        PlayerPrefs.SetInt("MedallaAtletismo", numMedalla);
+        int previousMedal = PlayerPrefs.GetInt("MedallaAtletismo", 4);
+
+        PlayerPrefs.SetInt("MedallaTemporal", numMedalla);
+        if (previousMedal < level)
+        {
+            PlayerPrefs.SetInt("MedallaAtletismo", numMedalla);
+        }
         PlayerPrefs.Save();
     }
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class AtletismoCameraController : MonoBehaviour
+public class PingPongCameraController : MonoBehaviour
 {
     public Transform focusPoint; // Objeto vacío para el acercamiento inicial
     public float moveDuration = 2f; // Duración del movimiento de la cámara hacia el focusPoint

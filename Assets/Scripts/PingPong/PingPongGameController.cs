@@ -14,10 +14,10 @@ public class PingPongGameController : MonoBehaviour
     public Player_Movement player;
     public Bot bot; 
 
-    private float roundTime = 25f;  // Tiempo por ronda (en segundos)
+    private int level;
+
+    private float roundTime = 15f;  // Tiempo total del juego (30 segundos)
     private float currentRoundTime;
-    private int currentRound = 1;
-    private int totalRounds = 3;  
     private bool isPaused = true;
     public Animator introAnimator;  
 
@@ -37,7 +37,7 @@ public class PingPongGameController : MonoBehaviour
         else
         {
             isPaused = false;
-            StartCoroutine(RoundTimer());
+            StartCoroutine(GameTimer());
         }
     }
 
@@ -48,10 +48,10 @@ public class PingPongGameController : MonoBehaviour
 
         isPaused = false;
         messageText.gameObject.SetActive(false);
-        StartCoroutine(RoundTimer());
+        StartCoroutine(GameTimer());
     }
 
-    private IEnumerator RoundTimer()
+    private IEnumerator GameTimer()
     {
         while (currentRoundTime > 0)
         {
@@ -63,7 +63,8 @@ public class PingPongGameController : MonoBehaviour
             yield return null;
         }
 
-        EndRound();
+        // Cuando se acaben los 30 segundos, termina el juego
+        EndGame();
     }
 
     public void PlayerScores()
@@ -136,40 +137,6 @@ public class PingPongGameController : MonoBehaviour
         }
     }
 
-    private void EndRound()
-    {
-        if (currentRound < totalRounds)
-        {
-            StartCoroutine(ShowRoundCompleteMessage());
-        }
-        else
-        {
-            EndGame();
-        }
-    }
-
-    private IEnumerator ShowRoundCompleteMessage()
-    {
-        isPaused = true;
-        FreezeGame(true);
-
-        // Muestra el mensaje de fin de ronda
-        messageText.text = "Ronda " + currentRound + " completada";
-        messageText.gameObject.SetActive(true);
-        yield return new WaitForSeconds(2);
-
-        messageText.gameObject.SetActive(false);
-        currentRound++;
-
-        // Reiniciar solo el temporizador y las posiciones de los objetos
-        currentRoundTime = roundTime;
-        ResetRoundPositions();
-
-        isPaused = false;
-        FreezeGame(false);
-        StartCoroutine(RoundTimer());
-    }
-
     public void ResetRoundPositions()
     {
         ball.ResetBall();  // Resetear la posición de la pelota
@@ -178,9 +145,62 @@ public class PingPongGameController : MonoBehaviour
 
     private void EndGame()
     {
-        messageText.text = "Juego Completado";
-        SceneManager.LoadScene("MapScene");
-        messageText.gameObject.SetActive(true);
-        // Aquí puedes agregar la lógica final del juego.
+        // Evaluar el resultado al final del juego
+        if (currentRoundTime > 0)
+        {
+            Debug.Log("El tiempo no ha terminado, no se evaluará la medalla aún.");
+            return;
+        }
+
+        if (playerScore > botScore && playerScore > 4)
+        {
+            // El jugador gana oro
+            PlayerPrefs.SetString("PingPongPlayerMedal", "Gold");
+            Debug.Log("You won a Gold Medal!");
+            level = 3;
+            guardarMedalla(3);
+        }
+        else if (botScore > playerScore && (botScore - playerScore) < 2)
+        {
+            // El jugador pierde, pero la diferencia de puntaje es menor que 2 - Plata
+            PlayerPrefs.SetString("PingPongPlayerMedal", "Silver");
+            Debug.Log("You won a Silver Medal!");
+            level = 2;
+            guardarMedalla(2);
+        }
+        else if (playerScore >= 2)
+        {
+            // El jugador anotó al menos 2 puntos - Bronce
+            PlayerPrefs.SetString("PingPongPlayerMedal", "Bronze");
+            Debug.Log("You won a Bronze Medal!");
+            level = 1;
+            guardarMedalla(1);
+        }
+        else
+        {
+            // El jugador no anotó los puntos mínimos - Sin medalla
+            PlayerPrefs.SetString("PingPongPlayerMedal", "No Medal");
+            Debug.Log("You did not win any medal.");
+            level = 0;
+            guardarMedalla(0);
+        }
+
+        // Cargar la escena del mapa
+        SceneManager.LoadScene("MedallasScene");
     }
+
+
+
+    void guardarMedalla(int numMedalla)
+    {
+        int playerScore = PlayerPrefs.GetInt("MedallaPingPong", 4);
+
+        PlayerPrefs.SetInt("MedallaTemporal", numMedalla);
+        if (playerScore < level)
+        {
+            PlayerPrefs.SetInt("MedallaPingPong", numMedalla);
+        }
+        PlayerPrefs.Save();
+    }
+    
 }

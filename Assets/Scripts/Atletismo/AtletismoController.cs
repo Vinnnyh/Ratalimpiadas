@@ -19,6 +19,7 @@ public class AtletismoController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false; // Desactivamos la gravedad global predeterminada
+        raceManager.RegisterRacer(transform, true);
     }
 
     void FixedUpdate()
@@ -51,8 +52,8 @@ public class AtletismoController : MonoBehaviour
         if (other.CompareTag("End"))
         {
             Debug.Log("Jugador alcanzó el final.");
-            isGameEnded = true; // Marcar el juego como terminado
-            raceManager.OnAthleticsRacerReachEnd(transform);
+            isGameEnded = true;
+            raceManager.OnAthleticsRacerReachEnd(transform); // Registrar al jugador
         }
         else if (other.CompareTag("Void"))
         {

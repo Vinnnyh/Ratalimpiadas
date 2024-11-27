@@ -22191,11 +22191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4dc11609a83944893d25121b514cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 6
   force: 5
-  hitHeight: 1.5
-  airSpeedReduction: 1
-  slowdownDuration: 2
+  hitHeight: 2
+  airSpeedReduction: 3
+  slowdownDuration: 1
   ball: {fileID: 2034843571}
   aimTarget: {fileID: 2087678564}
   targets:

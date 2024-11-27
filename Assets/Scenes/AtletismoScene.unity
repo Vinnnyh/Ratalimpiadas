@@ -7810,6 +7810,7 @@ MonoBehaviour:
   maxRunSpeed: 4.5
   gravityScale: 0.8
   visualObject: {fileID: 1613010463}
+  raceManager: {fileID: 580351770}
 --- !u!23 &446278676
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13596,8 +13597,8 @@ Transform:
   m_GameObject: {fileID: 855277289}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.9038, y: 9.4694, z: -0.094002545}
-  m_LocalScale: {x: 1.6778352, y: 4.3344007, z: -10.082325}
+  m_LocalPosition: {x: 14.9038, y: 9.5316, z: -0.094002545}
+  m_LocalScale: {x: 1.6778352, y: 4.458798, z: -10.082325}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 355523563}
@@ -13842,6 +13843,7 @@ MonoBehaviour:
   maxRunSpeed: 4.5
   gravityScale: 0.8
   visualObject: {fileID: 1639446823}
+  raceManager: {fileID: 580351770}
 --- !u!23 &864874295
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13993,6 +13995,7 @@ MonoBehaviour:
   maxRunSpeed: 4.5
   gravityScale: 0.8
   visualObject: {fileID: 1780850985}
+  raceManager: {fileID: 580351770}
 --- !u!23 &881133667
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17439,8 +17442,8 @@ Transform:
   m_GameObject: {fileID: 1103312527}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.7865, y: 3.2668, z: -0.094002545}
-  m_LocalScale: {x: 2.9496064, y: 2.324793, z: -10.082325}
+  m_LocalPosition: {x: 30.7752, y: 3.29, z: -0.094002545}
+  m_LocalScale: {x: 2.9966478, y: 2.324793, z: -10.082325}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 355523563}
@@ -25552,7 +25555,7 @@ Transform:
   m_GameObject: {fileID: 1753553774}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0.4981112, y: -0.0022499126, z: 14.617863}
+  m_LocalPosition: {x: 0.4981112, y: 0.008, z: 14.617863}
   m_LocalScale: {x: 30.932665, y: 0.9955001, z: 0.006142555}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30116,6 +30119,7 @@ MonoBehaviour:
   maxRunSpeed: 4.5
   gravityScale: 0.8
   visualObject: {fileID: 1024162129}
+  raceManager: {fileID: 580351770}
 --- !u!54 &1980632713
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31586,8 +31590,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.528471, y: 2.6391442, z: 0.22928983}
-  m_Center: {x: -0.056618907, y: 0.319574, z: -0.000034530116}
+  m_Size: {x: 2.471294, y: 2.6391442, z: 0.22928983}
+  m_Center: {x: 0.47197026, y: 0.319574, z: -0.000034530116}
 --- !u!1 &2057727641
 GameObject:
   m_ObjectHideFlags: 0

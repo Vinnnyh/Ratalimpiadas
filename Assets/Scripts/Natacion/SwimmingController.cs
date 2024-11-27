@@ -1,61 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SwimmingController : MonoBehaviour
 {
     public float swimSpeed = 10f;
-
     private bool canPressW = true;
     private bool canPressS = false;
-    private Vector3 moveDirection = Vector3.forward; // Dirección de movimiento inicial
+    private Vector3 moveDirection = Vector3.forward;
     public RaceManager raceManager;
 
     void Start()
     {
-        // Inicializamos la dirección para que siempre se mueva hacia adelante al comenzar
         moveDirection = transform.forward;
-        raceManager.RegisterRacer(transform);
+        raceManager.RegisterRacer(transform, true); // Notifica al RaceManager que este es el jugador
     }
 
     void Update()
     {
-        // Alternativa para teclado con W y S
         if (Input.GetKeyDown(KeyCode.W) && canPressW)
         {
             SwimForward();
             canPressW = false;
-            canPressS = true; // Ahora solo S puede avanzar
+            canPressS = true;
         }
         else if (Input.GetKeyDown(KeyCode.S) && canPressS)
         {
             SwimForward();
             canPressS = false;
-            canPressW = true; // Ahora solo W puede avanzar
+            canPressW = true;
         }
 
-        // Alternativa para los joysticks
-        if (Input.GetAxis("AtletismTriggerLeft") < 0f && Input.GetAxis("AtletismTriggerRight") < 0f ) {
-
-        } else {
+        if (Input.GetAxis("AtletismTriggerLeft") < 0f && Input.GetAxis("AtletismTriggerRight") < 0f) { }
+        else
+        {
             if (Input.GetAxis("AtletismTriggerLeft") < 0f && canPressW)
             {
                 SwimForward();
                 canPressW = false;
-                canPressS = true; // Ahora solo el joystick derecho puede avanzar
+                canPressS = true;
             }
             else if (Input.GetAxis("AtletismTriggerRight") < 0f && canPressS)
             {
                 SwimForward();
                 canPressS = false;
-                canPressW = true; // Ahora solo el joystick izquierdo puede avanzar
+                canPressW = true;
             }
         }
     }
 
     private void SwimForward()
     {
-        // Avanzar en la dirección de movimiento
         transform.Translate(moveDirection * swimSpeed * Time.deltaTime, Space.World);
     }
 
@@ -63,19 +56,13 @@ public class SwimmingController : MonoBehaviour
     {
         if (other.CompareTag("End"))
         {
-            // Notificar al RaceManager que el jugador/bot llegó a End
             raceManager.OnRacerReachEnd(transform);
-
-            // Cambiar dirección de movimiento
             moveDirection = -moveDirection;
             transform.Rotate(0, 180, 0);
         }
         else if (other.CompareTag("Start"))
         {
             raceManager.OnRacerReachStart(transform);
-
-            // Terminar el juego al llegar a Start
-            Debug.Log("Jugador alcanzó Start. Finalizando el juego.");
         }
     }
 }
