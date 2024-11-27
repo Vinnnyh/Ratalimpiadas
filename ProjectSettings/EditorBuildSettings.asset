@@ -15,14 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/HalterofiliaScene.unity
     guid: fe24c7d894fae2f44b3d0a6f1ed40ba5
   - enabled: 1
-    path: Assets/Scenes/NatacionScene.unity
-    guid: 5ee8b906a815fe347bc2fb9da44241ab
-  - enabled: 1
     path: Assets/Scenes/PingPongScene.unity
     guid: f8ad8d114c395324e9249ba421fb1c16
-  - enabled: 1
-    path: Assets/Scenes/AtletismoScene.unity
-    guid: 205b924b8b5b6134b8a0c22ca02a1c85
   - enabled: 1
     path: Assets/Scenes/MenuMedallasScene.unity
     guid: 9763d149e97350c4a9fa80fe44af6579

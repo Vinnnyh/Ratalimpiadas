@@ -65,35 +65,45 @@ public class PausaMenuManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("PauseMap"))
+        int guiaControl = PlayerPrefs.GetInt("GuiaControl", 0);
+
+        if (guiaControl == 0)
         {
-            Debug.Log("Button pause pressed");
+            if (Input.GetButtonDown("PauseMap"))
+            {
+                if (isPaused)
+                {
+                    Reanudar();
+                }
+                else
+                {
+                    Pausar();
+                }
+            }
+
+            // Si el juego está en pausa, evita el control del jugador
             if (isPaused)
             {
-                Reanudar();
+                return; // Salir del método Update para prevenir más entradas
             }
-            else
+
+            // Asegúrate de que el botón seleccionado esté siempre seleccionado
+            if (buttonToSelect != null && EventSystem.current.currentSelectedGameObject != buttonToSelect)
             {
-                Pausar();
+                EventSystem.current.SetSelectedGameObject(buttonToSelect);
             }
         }
 
-        // Si el juego está en pausa, evita el control del jugador
-        if (isPaused)
-        {
-            return; // Salir del método Update para prevenir más entradas
-        }
-
-        // Asegúrate de que el botón seleccionado esté siempre seleccionado
-        if (buttonToSelect != null && EventSystem.current.currentSelectedGameObject != buttonToSelect)
-        {
-            EventSystem.current.SetSelectedGameObject(buttonToSelect);
-        }
+        
     }
 
     public void Reanudar()
     {
         menuPausaUI.SetActive(false);
+
+        PlayerPrefs.SetInt("MenuPausa", 0);
+        PlayerPrefs.Save();
+
         Time.timeScale = 1f;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -110,6 +120,10 @@ public class PausaMenuManager : MonoBehaviour
     void Pausar()
     {
         menuPausaUI.SetActive(true);
+
+        PlayerPrefs.SetInt("MenuPausa", 1);
+        PlayerPrefs.Save();
+
         Time.timeScale = 0f;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;

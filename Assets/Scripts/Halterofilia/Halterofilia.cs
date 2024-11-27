@@ -43,21 +43,26 @@ public class Halterofilia : MonoBehaviour
 
     void Update()
     {
-        if (!isPlaying)
-        {
-            buttonChangeTimer += Time.deltaTime;
-            if (buttonChangeTimer >= nextButtonChangeTime)
-            {
-                SetRandomButton();
-                SetNextButtonChangeTime();
-                buttonChangeTimer = 0;
-            }
-        }
+        int pausaMenu = PlayerPrefs.GetInt("MenuPausa", 0);
 
-        controlMensajesPulsaciones();
-        controlNiveles();
-        controlBar();
-        controlBarraTiempo();
+        if (pausaMenu == 0)
+        {
+            if (!isPlaying)
+            {
+                buttonChangeTimer += Time.deltaTime;
+                if (buttonChangeTimer >= nextButtonChangeTime)
+                {
+                    SetRandomButton();
+                    SetNextButtonChangeTime();
+                    buttonChangeTimer = 0;
+                }
+            }
+
+            controlMensajesPulsaciones();
+            controlNiveles();
+            controlBar();
+            controlBarraTiempo();
+        }
     }
 
     private void SetRandomButton()
