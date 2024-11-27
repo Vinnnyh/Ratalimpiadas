@@ -21,7 +21,7 @@ public class MainMenuController : MonoBehaviour
     void GuardarPosicionObjeto()
     {
         // Guardar cada componente de la posición por separado
-        PlayerPrefs.SetFloat("PosicionX", 0f);
+        PlayerPrefs.SetFloat("PosicionX", -3.98f);
         PlayerPrefs.SetFloat("PosicionY", 0.7f);
         PlayerPrefs.SetFloat("PosicionZ", 0f);
 
