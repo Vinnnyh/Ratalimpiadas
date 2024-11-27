@@ -15,8 +15,6 @@ public class Walk : MonoBehaviour
     private string currentState; // Estado actual del Animator
 
     public GameObject PJ;
-    public GameObject canvasMenuEnseñanza;
-    public GameObject canvasMenuEnseñanza2;
 
     const string STATE_FRONT = "State Front";
     const string STATE_BACK = "State Back";
@@ -30,16 +28,13 @@ public class Walk : MonoBehaviour
     float movimientoHorizontal;
     float movimientoVertical;
 
-    void Update()
+    void Start()
     {
         CargarPosicionObjeto();
-        int yaejecuto = PlayerPrefs.GetInt("YaEjecuto", 0);
-        if (yaejecuto == 0)
-        {
-            canvasMenuEnseñanza2.SetActive(false);
-            canvasMenuEnseñanza2.SetActive(false);
-        }
+    }
 
+    void Update()
+    {
         // Capturar los ejes de movimiento (joystick o teclas) en cada frame
         movimientoHorizontal = Input.GetAxis("HorizontalMap");
         movimientoVertical = Input.GetAxis("VerticalMap");
