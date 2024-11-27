@@ -9,6 +9,9 @@ public class MainMenuController : MonoBehaviour
         // Redirigir directamente a Ping-Pong (reemplazar "PingPongScene" con "MapScene" cuando esté listo)
         SceneManager.LoadScene("MapScene");
         GuardarPosicionObjeto();
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+
     }
 
     public void QuitGame()
