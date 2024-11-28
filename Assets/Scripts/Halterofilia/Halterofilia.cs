@@ -27,7 +27,7 @@ public class Halterofilia : MonoBehaviour
     private float TimeLimit = 30f;
     private float tiempo = 3f;
 
-    // Modificado: Ahora usamos integers para los botones para coincidir con los parámetros del animator
+    // Modificado: Ahora usamos integers para los botones para coincidir con los parï¿½metros del animator
     private int[] buttonValues = { 1, 2, 3, 4 }; // 1=A, 2=B, 3=Y, 4=X
     private string[] buttonNames = { "A-A", "B-S", "Y-D", "X-W" };
     private string currentButton;
@@ -58,7 +58,6 @@ public class Halterofilia : MonoBehaviour
                 }
             }
             buttonAnimator.SetInteger("ButtonState", currentButtonValue);
-            Debug.Log(currentButtonValue);
 
             controlMensajesPulsaciones();
             controlNiveles();
@@ -80,9 +79,9 @@ public class Halterofilia : MonoBehaviour
             currentButtonValue = buttonValues[randomIndex];
         } while (currentButton == previousButton);
 
-        // Activar la animación correspondiente
+        // Activar la animaciï¿½n correspondiente
         buttonAnimator.SetInteger("ButtonState", currentButtonValue);
-        Debug.Log("Nuevo botón: " + currentButton);
+        Debug.Log("Nuevo botï¿½n: " + currentButton);
     }
 
     private void SetNextButtonChangeTime()
@@ -159,7 +158,7 @@ public class Halterofilia : MonoBehaviour
             {
                 keyPressCount++;
                 remainingTime++;
-                // Opcional: Puedes agregar una animación de "presionado correcto"
+                // Opcional: Puedes agregar una animaciï¿½n de "presionado correcto"
                 //buttonAnimator.SetTrigger("Pressed");
             }
         }
