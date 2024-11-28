@@ -57,6 +57,8 @@ public class Halterofilia : MonoBehaviour
                     buttonChangeTimer = 0;
                 }
             }
+            buttonAnimator.SetInteger("ButtonState", currentButtonValue);
+            Debug.Log(currentButtonValue);
 
             controlMensajesPulsaciones();
             controlNiveles();
